@@ -1,3 +1,4 @@
-# Template-Standaard
+# Digikoppeling Beveiligingstandaarden en voorschriften
 
-https://logius-standaarden.github.io/Template-Repository/
+- html: https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/
+- markdown: [04_content.md](04_content.md)/
