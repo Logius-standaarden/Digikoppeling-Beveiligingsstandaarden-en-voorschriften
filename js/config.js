@@ -36,11 +36,11 @@ var respecConfig = {
   publishDate: "2020-09-01",
 
   // A YYYY-MM-DD date. When there is a previous release of a given specification, (W3C)
-  // previousPublishDate: "2020-09-01",
+  previousPublishDate: "2020-09-01",
 
   // Zie https://github.com/w3c/respec/wiki/previousMaturity. Dit moet een
   // A YYYY-MM-DD date. When a previousPublishDate is specified, this is typically required as well in order to generate the "Previous Version"
-  // previousMaturity: "ST",
+  previousMaturity: "DEF",
 
   // license can be one of the following: cc0, cc-by or cc-by-nd((default)) (see https://github.com/Geonovum/respec/wiki/license )
   license: 'cc-by-nd',
@@ -110,7 +110,7 @@ var respecConfig = {
   // The specification's publish domain, which is used to publish the specification
   // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
   pubDomain: "dk",
-  pubSubdomain: "beveilig",
+  pubSubDomain: "beveilig",
 
   // For Consultatieversies (specStatus="GN-CV") there is a default text in the section "Status of this document" that contains an emailaddress for feedback and comments on the document.
   nl_emailComments: "digikoppeling@logius.nl",
@@ -250,5 +250,6 @@ var respecConfig = {
       date: "Nov 2014",
       publisher: "NCSC",
     }
-  }
+  },
 };
+
