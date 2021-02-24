@@ -202,6 +202,11 @@ var respecConfig = {
       title: "Gebruik en achtergrond van Digikoppeling certificaten",
       publisher: "Logius",
     },
+    "PKIoverheid": {
+      href: "https://www.logius.nl/diensten/pkioverheid",
+      title: "PKIoverheid",
+      publisher: "Logius",
+    },
     "PKI Policy": {
       href: "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen",
       title: "Programma van Eisen (PKIoverheid)",

@@ -75,13 +75,11 @@ Het OIN register is bereikbaar op [*https://portaal.digikoppeling.nl/registers/*
 
 PKIoverheid is de public key infrastructure in Nederland waarmee PKIoverheid certificaten worden uitgegeven en toegepast conform afspraken die zijn vastgelegd in het PKIoverheid Programma van Eisen.
 
-Zie ook het document [[?Digikoppeling-Cert]] en [www.logius.nl/pkioverheid](http://www.logius.nl/pkioverheid)
+Zie ook het document [[?Digikoppeling-Cert]] en [[?PKIoverheid]]
 
 ### PKIoverheid certificaat 
 
-Digitale certificaten zijn een onmisbare schakel in beveiligd internetverkeer. Een certificaat is een legitimatiebewijs van een website of ICT-systeem. Daarnaast bevat het gegevens die nodig zijn voor beveiligd internetverkeer.<sup>1</sup>
-
-<sup>1</sup>: Bron: [https://www.logius.nl/diensten/pkioverheid/](https://www.logius.nl/diensten/pkioverheid/)
+Het PKIoverheid-certificaat is een computerbestand dat werkt als een digitaal paspoort. Als iemand een website, e-mail of document van uw organisatie wil bekijken, controleert zijn webbrowser of e-mailprogramma het bijbehorende certificaat. Door elkaar te identificeren verkleint de kans dat oplichters zich voor kunnen doen als iemand anders. Digitale certificaten waarborgen dus betrouwbaarheid [[?PKIoverheid]].
 
 Digikoppeling vereist dat de communicatiepartners PKIoverheid private root certificaten gebruiken met een OIN om op een vertrouwelijke wijze gegevens uit te wisselen.
 
@@ -96,7 +94,7 @@ Digikoppeling vereist dat de communicatiepartners PKIoverheid private root certi
 | PKI002 | PKIoverheid certificaat moet geldig zijn (het mag niet zijn verlopen of ingetrokken). | |
 | PKI003<br>(WT004)  | De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List(CRL) die voldoet aan de eisen van PKI-overheid. | |
 | PKI004<br>(WT005) | De betreffende CRL dient zowel voor de versturende als ontvangende partij te benaderen zijn. | |
-| PKI005 | Het certificaat moet zijn van het type PKIoverheid private root (PKI Staat der Nederlanden Private Root) <sup>*</sup>. <br><br><sup>*</sup>Uitzondering is wanneer er in het kader van certificaatbeheer op 1 server reden is om PKIO public root certificaten te gebruiken voor zowel koppeling als voor webserver. Hier dienen dan bilateraal afspraken over te worden gemaakt tussen de partijen.<br>(Bij gebruik van PKIO public root certificaten is een specifieke eis en aandachtspunt dat deze vanwege externe regelgeving altijd binnen drie tot vijf dagen vervangen moeten kunnen worden.)<br>Deze uitzondering is toegestaan tot 01-12-2022<br><br>Voor Serviceaanbieders  en Servicegebruikers geldt dat zij uiterlijk per 1-1-2021 gebruik moeten maken van private root certificaten| PKIOverheid geeft aan dat voor machine-naar-machine (M2M) verkeer (zoals Digikoppeling) Private root certificaten gebruikt dienen te worden.|
+| PKI005 | Het certificaat moet zijn van het type PKIoverheid private root (PKI Staat der Nederlanden Private Root) <sup>1</sup>. <br><br><sup>1</sup> Uitzondering is wanneer er in het kader van certificaatbeheer op 1 server reden is om PKIO public root certificaten te gebruiken voor zowel koppeling als voor webserver. Hier dienen dan bilateraal afspraken over te worden gemaakt tussen de partijen.<br>(Bij gebruik van PKIO public root certificaten is een specifieke eis en aandachtspunt dat deze vanwege externe regelgeving altijd binnen drie tot vijf dagen vervangen moeten kunnen worden.)<br>Deze uitzondering is toegestaan tot 01-12-2022<br><br>Voor Serviceaanbieders  en Servicegebruikers geldt dat zij uiterlijk per 1-1-2021 gebruik moeten maken van private root certificaten| PKIOverheid geeft aan dat voor machine-naar-machine (M2M) verkeer (zoals Digikoppeling) Private root certificaten gebruikt dienen te worden.|
 
 ### PKIoverheid programma van eisen
 
