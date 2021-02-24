@@ -6,7 +6,7 @@ Dit document beschrijft de eisen die Digikoppeling stelt aan de beveiliging van 
 
 Dit document is bestemd voor architecten en ontwikkelaars van applicaties die gebruik maken van Digikoppeling om berichten tussen systemen veilig uit te wisselen.
 
-Alle Digikoppeling webservices die op WUS of ebMS2 gebaseerd zijn, moeten conformeren aan deze Digikoppeling beveiligingsstandaarden en voorschriften. Deze wordt in dit document gespecificeerd.
+Alle Digikoppeling webservices, moeten conformeren aan deze Digikoppeling beveiligingsstandaarden en voorschriften. Deze wordt in dit document gespecificeerd.
 
 Doel van dit document is ontwikkelaars te informeren wat deze beveiligingsvoorschriften precies inhouden, welke standaarden en welke versies toegestaan zijn en partijen zich aan moeten conformeren.
 
@@ -21,7 +21,7 @@ De uitwisseling tussen service providers en requesters wordt in drie lagen opged
 - Inhoud: op deze laag worden de afspraken gemaakt over de inhoud van het uit te wisselen bericht, dus de structuur, semantiek, waardebereiken etc.   
     Digikoppeling houdt zich niet met de inhoud bezig, ‘heeft geen boodschap aan de boodschap’.
 
-- Logistiek: op deze laag bevinden zich de afspraken betreffende transportprotocollen (HTTP & TLS), messaging (SOAP), beveiliging (authenticatie en encryptie) en betrouwbaarheid. Dit is de laag van Digikoppeling.
+- Logistiek: op deze laag bevinden zich de afspraken betreffende transportprotocollen (HTTP & TLS), messaging (SOAP/REST API), beveiliging (authenticatie en encryptie) en betrouwbaarheid. Dit is de laag van Digikoppeling.
 
 - Transport: deze laag verzorgt het daadwerkelijke transport van het bericht (TCP/IP).
 
@@ -31,17 +31,15 @@ De koppelvlakstandaarden dienen te leiden tot een maximum aan interoperabiliteit
 
 Daarom is gekozen voor bewezen interoperabele internationale standaarden.
 
-Digikoppeling maakt berichtenuitwisseling mogelijk op basis van de ebXML/ebMS2 en WS\* families van standaarden inclusief de daarbij behorende verwante standaarden.
-
 ## Digikoppeling standaarden 
 
 De Digikoppeling standaarden bestaan uit de volgende documenten (groene blokken zijn onderdeel van de Digikoppeling standaard):
 
 *Specificatie van de koppelvlakstandaarden*
 
-De koppelvlakspecificatie beschrijft de eisen die gesteld worden aan de adapters om interoperabel met elkaar te kunnen communiceren. Digikoppeling gaat over logistiek, dus over de envelop en niet over de inhoud. De hele set informatie die tezamen nodig is voor een complete generieke Digikoppeling koppelvlakdefinitie bestaat uit:
+De koppelvlakspecificatie beschrijft de eisen die gesteld worden aan de adapters om interoperabel met elkaar te kunnen communiceren. De hele set informatie die tezamen nodig is voor een complete generieke Digikoppeling koppelvlakdefinitie bestaat uit:
 
-- Interfacedefinitie WUS of ebMS2 met SOAP headers en informatie over velden en hun specifieke inhoud.
+- Interfacedefinitie.
 
 - Beveiligingsvoorschriften en standaarden voor de transport laag, signing en encryptie (cipher suites).
 
@@ -85,7 +83,7 @@ Digitale certificaten zijn een onmisbare schakel in beveiligd internetverkeer. E
 
 <sup>1</sup>: Bron: [https://www.logius.nl/diensten/pkioverheid/](https://www.logius.nl/diensten/pkioverheid/)
 
-Digikoppeling vereist dat de communicatiepartners PKIoverheid public root certificaten of PKIoverheid private root certificaten gebruiken met een OIN om op een vertrouwelijke wijze gegevens uit te wisselen.
+Digikoppeling vereist dat de communicatiepartners PKIoverheid private root certificaten gebruiken met een OIN om op een vertrouwelijke wijze gegevens uit te wisselen.
 
 ## Voorschriften
 
@@ -98,7 +96,7 @@ Digikoppeling vereist dat de communicatiepartners PKIoverheid public root certif
 | PKI002 | PKIoverheid certificaat moet geldig zijn (het mag niet zijn verlopen of ingetrokken). | |
 | PKI003<br>(WT004)  | De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List(CRL) die voldoet aan de eisen van PKI-overheid. | |
 | PKI004<br>(WT005) | De betreffende CRL dient zowel voor de versturende als ontvangende partij te benaderen zijn. | |
-| PKI005 | Het certificaat moet zijn van het type PKIoverheid public root (PKI Staat der Nederlanden Root) of PKIoverheid private root (PKI Staat der Nederlanden Private Root).   *Voor Serviceaanbieders geldt dat zij uiterlijk per 1-1-2021 gebruik van private root certificaten moeten ondersteunen * | |
+| PKI005 | Het certificaat moet zijn van het type PKIoverheid private root (PKI Staat der Nederlanden Private Root) <sup>*</sup>. <br><br><sup>*</sup>Uitzondering is wanneer er in het kader van certificaatbeheer op 1 server reden is om PKIO public root certificaten te gebruiken voor zowel koppeling als voor webserver. Hier dienen dan bilateraal afspraken over te worden gemaakt tussen de partijen.<br>(Bij gebruik van PKIO public root certificaten is een specifieke eis en aandachtspunt dat deze vanwege externe regelgeving altijd binnen drie tot vijf dagen vervangen moeten kunnen worden.)<br>Deze uitzondering is toegestaan tot 01-12-2022<br><br>Voor Serviceaanbieders  en Servicegebruikers geldt dat zij uiterlijk per 1-1-2021 gebruik moeten maken van private root certificaten| PKIOverheid geeft aan dat voor machine-naar-machine (M2M) verkeer (zoals Digikoppeling) Private root certificaten gebruikt dienen te worden.|
 
 ### PKIoverheid programma van eisen
 
@@ -106,7 +104,7 @@ Digikoppeling vereist dat de communicatiepartners PKIoverheid public root certif
 
 1. De te gebruiken certificaten in de productie omgeving voldoen aan de eisen van PKIoverheid (PvE) en de inhoud van de identificerende velden in het certificaat dienen te voldoen aan de afspraken zoals gesteld in de functionele eisen in het document [[?Digikoppeling Identificatie-Authenticatie]]. Met het toepassen van PKIoverheid-certificaten die Digikoppeling compliant zijn, wordt hieraan voldaan.
 
-1. Certificaten voor productie wijken af van certificaten voor test doordat zij op verschillende ‘roots’ zijn gebaseerd, respectievelijk ‘PKI Staat der Nederlanden Root’ (of Staat der Nederlanden Private Root) en ‘PKI TRIAL root’.
+1. Certificaten voor productie wijken af van certificaten voor test doordat zij op verschillende ‘roots’ zijn gebaseerd, respectievelijk 'Staat der Nederlanden Root Private Root’ en ‘PKI TRIAL root’.
 
 ### Geldigheid
 
@@ -126,8 +124,8 @@ De best practices voor inrichting en gebruik zijn beschreven in *Gebruik en acht
 
 | Standaarden | Status | Bron |
 | --- | --- | --- |
-| TLS 1.2 [[rfc5246]]  | Verplicht  | [[NCSC 2019]]  |
-| TLS 1.3 [[rfc8446]]  | Optioneel  | [[NCSC 2019]]  |
+| TLS 1.2 [[rfc5246]]  | Verplicht  | [[NCSC 2021]]  |
+| TLS 1.3 [[rfc8446]]  | Optioneel  | [[NCSC 2021]]  |
 | HTTP over TLS Transport Layer Security<br>([[rfc2818]], [[rfc5785]], [[rfc7230]]) | Informational |  IETF [[rfc5322]]|
 
 ## Digikoppeling voorschriften
@@ -137,9 +135,10 @@ De best practices voor inrichting en gebruik zijn beschreven in *Gebruik en acht
 | TLS001 | Authenticatie is verplicht met TLS en PKIoverheid certificaten | |
 | TLS002 | Tweezijdig TLS is verplicht | Digikoppeling schrijft het gebruik van twee-zijdig TLS voor en verplicht dit voor alle vormen van berichtuitwisseling via Digikoppeling. |
 | TLS003 | De TLS implementatie mag niet op SSL v3 en eerdere versies terugvallen | Backward compatibility mode voor SSL v3 en eerdere versies dient te worden uitgezet. |
-| TLS004 | Een Serviceaanbieder is verplicht TLS versie 1.2 te ondersteunen, daarnaast is het aanbevolen voor een Serviceaanbieder om TLS versie 1.3 te ondersteunen.  Als een Serviceaanbieder TLS versie 1.3 aanbiedt dan is het aanbevolen voor Serviceafnemers om TLS 1.3 te gebruiken       TLS 1.0 en TLS 1.1 zijn niet meer toegestaan | NCSC geeft aan: “De beste bescherming wordt momenteel geboden door de meest recente TLS versie: TLS 1.3” Zie [[NCSC 2019]]          Niet meer toegestaan binnen de Digikoppeling standaard vanaf 10-9-2016  |
+| TLS004 | Een Serviceaanbieder is <span class="underline">verplicht</span> TLS versie 1.2 te ondersteunen, daarnaast is het <span class="underline">aanbevolen</span> voor een Serviceaanbieder om TLS versie 1.3 te ondersteunen.  Als een Serviceaanbieder TLS versie 1.3 aanbiedt dan is het aanbevolen voor Serviceafnemers om TLS 1.3 te gebruiken | NCSC geeft aan: “De beste bescherming wordt momenteel geboden door de meest recente TLS versie: TLS 1.3” Zie [[NCSC 2021]]           |
+||TLS 1.0 en TLS 1.1 zijn niet meer toegestaan|Niet meer toegestaan binnen de Digikoppeling standaard vanaf 10-9-2016 |
 | TLS005 | Het is verplicht voor communicatie over HTTPS port 443 te gebruiken | Port 443 is de standaard poort voor HTTPS verkeer |
-| TLS006 | Het is verplicht te voldoen aan de NCSC ICT-beveiligingsrichtlijnen voor TLS | Zie H3 van [[NCSC 2019]] |
+| TLS006 | Het is verplicht te voldoen aan de NCSC ICT-beveiligingsrichtlijnen voor TLS | Zie H3 van [[NCSC 2021]] |
 
 ## Onderbouwing
 
@@ -149,7 +148,7 @@ In Digikoppeling is ervoor gekozen om PKIoverheid certificaten te gebruiken op h
 
 ## Overwegingen 
 
-Het NCSC adviseert om TLS altijd te configureren op basis van [[NCSC 2019]] voor Transport Layer Security].
+Het NCSC adviseert om TLS altijd te configureren op basis van [[NCSC 2021]] voor Transport Layer Security].
 
 # Cipher suites voor TLS, signing en encryptie 
 
@@ -157,7 +156,7 @@ Het NCSC adviseert om TLS altijd te configureren op basis van [[NCSC 2019]] voor
 
 | Nr | Voorschrift | Toelichting |
 | --- | --- | --- |
-| TLSCIPH001 |  De gebruikte TLS cryptografische algoritmen moeten de NCSC classificatie ‘voldoende’ of ‘goed’ hebben.  TLS cryptografische algoritmen met de NCSC classificatie ‘uit te faseren’ dienen zo spoedig mogelijk maar uiterlijk 01-01-2021 te worden uitgefaseerd. |   Zie  [[NCSC 2019]]  |
+| TLSCIPH001 |  De gebruikte TLS cryptografische algoritmen moeten de NCSC classificatie ‘voldoende’ of ‘goed’ hebben.  TLS cryptografische algoritmen met de NCSC classificatie ‘uit te faseren’ dienen zo spoedig mogelijk maar uiterlijk 01-01-2021 te worden uitgefaseerd. |   Zie  [[NCSC 2021]]  |
 
 ## XML Signing
 
@@ -174,7 +173,7 @@ Het NCSC adviseert om TLS altijd te configureren op basis van [[NCSC 2019]] voor
 
 *Certificaten met SHA-1 als hashfunctie worden vervangen door certificaten met hashfuncties uit de SHA-2-familie: SHA-256, SHA-384 en SHA-512. Certificaten met MD5 als hashfunctie zijn enkele jaren geleden al vervangen. MD5 is de voorloper van SHA-1. [[HTTPS-factsheet NCSC]]*
 
-PKIoverheid stelt SHA-2 als eis. Alle certificaten die onder de root Staat der Nederlanden worden uitgegeven moeten voldoen aan SHA-2. In [[NCSC 2019]] wordt SHA-1 nog wel als ‘voldoende’ bestempeld voor hashing binnen een applicatie, maar voor signing is het onvoldoende.
+PKIoverheid stelt SHA-2 als eis. Alle certificaten die onder de root Staat der Nederlanden worden uitgegeven moeten voldoen aan SHA-2. In [[NCSC 2021]] wordt SHA-1 nog wel als ‘voldoende’ bestempeld voor hashing binnen een applicatie, maar voor signing is het onvoldoende.
 
 In plaats daarvan is het dus wenselijk om gebruik te maken van een algoritme dat als ‘goed’ is aangemerkt, dus:
 

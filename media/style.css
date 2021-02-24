@@ -57,3 +57,7 @@ table.dkkvsincell {
     border-bottom: 0px solid #005a9c;
 
 }
+
+.underline {
+    text-decoration: underline;
+}

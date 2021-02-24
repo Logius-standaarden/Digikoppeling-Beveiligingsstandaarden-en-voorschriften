@@ -10,7 +10,7 @@ var respecConfig = {
   // EO: Einde ondersteuning, verouderde versie, vervangen door nieuwe versie
   // TG: Versie teruggetrokken
   // BASIS, GN-BASIS: 'geen status'
-  specStatus: "DEF",
+  specStatus: "WV",
 
   // SpecType currently supported
   // NO: "Norm"
@@ -36,11 +36,11 @@ var respecConfig = {
   publishDate: "2020-09-01",
 
   // A YYYY-MM-DD date. When there is a previous release of a given specification, (W3C)
-  //previousPublishDate: "2021-01-31",
+  // previousPublishDate: "2020-09-01",
 
   // Zie https://github.com/w3c/respec/wiki/previousMaturity. Dit moet een
   // A YYYY-MM-DD date. When a previousPublishDate is specified, this is typically required as well in order to generate the "Previous Version"
-  //previousMaturity: "WV",
+  // previousMaturity: "ST",
 
   // license can be one of the following: cc0, cc-by or cc-by-nd((default)) (see https://github.com/Geonovum/respec/wiki/license )
   license: 'cc-by-nd',
