@@ -79,19 +79,11 @@ Zie ook het document [[?Digikoppeling-Cert]] en [[?PKIoverheid]]
 
 Het PKIoverheid-certificaat is een computerbestand dat werkt als een digitaal paspoort. Als iemand een website, e-mail of document van uw organisatie wil bekijken, controleert zijn webbrowser of e-mailprogramma het bijbehorende certificaat. Door elkaar te identificeren verkleint de kans dat oplichters zich voor kunnen doen als iemand anders. Digitale certificaten waarborgen dus betrouwbaarheid [[?PKIoverheid]].
 
-<aside class="ednote">
-Onderstaande alinea is gewijzigd. zie <a href="https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/commit/0734b91a0bfa176822ba3a0c6ed4e5b00d4ea1fe#diff-60dc6a1ab83fcb42dfc65c70c9fd016b42650ec7ed3d7e7d09069a53bd422ce1">Gihub Commits</a> 
-</aside>
-
 Digikoppeling vereist dat de communicatiepartners PKIoverheid private root certificaten gebruiken met een OIN om op een vertrouwelijke wijze gegevens uit te wisselen.
 
 ## Voorschriften
 
 ### Digikoppeling voorschriften  
-
-<aside class="ednote">
-Voorschrift PKI005 is gewijzigd. zie <a href="https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/commit/0734b91a0bfa176822ba3a0c6ed4e5b00d4ea1fe#diff-60dc6a1ab83fcb42dfc65c70c9fd016b42650ec7ed3d7e7d09069a53bd422ce1">Gihub Commits</a> 
-</aside>
 
 | Nr | Voorschrift | Toelichting |
 | --- | --- | --- |
@@ -102,10 +94,6 @@ Voorschrift PKI005 is gewijzigd. zie <a href="https://github.com/Logius-standaar
 | PKI005 | Het certificaat moet zijn van het type PKIoverheid private root (PKI Staat der Nederlanden Private Root) <sup>1</sup>. <br><br><sup>1</sup> Uitzondering is wanneer er in het kader van certificaatbeheer op 1 server reden is om PKIO public root certificaten te gebruiken voor zowel koppeling als voor webserver. Hier dienen dan bilateraal afspraken over te worden gemaakt tussen de partijen.<br>(Bij gebruik van PKIO public root certificaten is een specifieke eis en aandachtspunt dat deze vanwege externe regelgeving altijd binnen drie tot vijf dagen vervangen moeten kunnen worden.)<br>Deze uitzondering is toegestaan tot 01-12-2022<br><br>Voor Serviceaanbieders  en Servicegebruikers geldt dat zij uiterlijk per 1-1-2021 gebruik moeten maken van private root certificaten| PKIOverheid geeft aan dat voor machine-naar-machine (M2M) verkeer (zoals Digikoppeling) Private root certificaten gebruikt dienen te worden.|
 
 ### PKIoverheid programma van eisen
-
-<aside class="ednote">
-Regel 3 is gewijzigd. zie <a href="https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/commit/0734b91a0bfa176822ba3a0c6ed4e5b00d4ea1fe#diff-60dc6a1ab83fcb42dfc65c70c9fd016b42650ec7ed3d7e7d09069a53bd422ce1">Gihub Commits</a> 
-</aside>
 
 1. Een PKIoverheid certificaat dient conform de eisen van het PKIoverheid PvE te worden uitgegeven door de Trust Service Providers (TSP).
 
