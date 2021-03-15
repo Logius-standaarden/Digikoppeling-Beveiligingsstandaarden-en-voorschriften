@@ -187,7 +187,7 @@ var respecConfig = {
       publisher: "Logius",
     },
     "Digikoppeling Beveiligingsdocument": {
-      href: "https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.3.pdf",
+      href: "https://www.logius.nl/sites/default/files/bestanden/website/Digikoppeling_Beveiligingsstandaarden_en_voorschriften_v1.4.pdf",
       title: "Digikoppeling Beveiligingsstandaarden en voorschriften",
       date: "2020",
       publisher: "Logius",
