@@ -57,7 +57,7 @@ De bron voor identificatie van organisaties is een erkend register dat is opgeno
 
 Zie [[?Digikoppeling Identificatie-Authenticatie]]] voor meer informatie.
 
-Het OIN register is bereikbaar op [*https://portaal.digikoppeling.nl/registers/*](https://portaal.digikoppeling.nl/registers/) .
+Het OIN register is bereikbaar op [*https://portaal.digikoppeling.nl/registers/*](https://portaal.digikoppeling.nl/registers/).
 
 # PKIoverheid certificaten
 
