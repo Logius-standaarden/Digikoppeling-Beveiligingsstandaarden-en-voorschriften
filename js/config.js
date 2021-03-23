@@ -24,6 +24,25 @@ var respecConfig = {
   // BP: "Best Practice"
   specType: "ST",
 
+  // A number indicating the maximum depth of the table of contents. Defaults to 0 which includes all levels.
+  // maxTocLevel: 3,
+
+  // Shows links to alternate formats (such as PDF, ePub) in the document header.
+  // alternateFormats: [{
+  //     label: "html",
+  //     uri: "https://publicatie.centrumvoorstandaarden.nl/api/oauth/static.html",
+  //   },
+  //   {
+  //     label: "pdf",
+  //     uri: "https://publicatie.centrumvoorstandaarden.nl/api/oauth/static.pdf",
+  //   },
+  // ],
+
+
+  // The specification's publish domain, which is used to publish the specification
+  // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
+  pubDomain: "dk",
+
   // subtitle will be shown below title, can be omitted 
   //subtitle: "Hier komt een subtitle",
 
@@ -37,6 +56,9 @@ var respecConfig = {
 
   // A YYYY-MM-DD date. When there is a previous release of a given specification, (W3C)
   previousPublishDate: "2020-09-01",
+
+  publishVersion: "1.4",
+  previousPublishVersion: "1.3",
 
   // Zie https://github.com/w3c/respec/wiki/previousMaturity. Dit moet een
   // A YYYY-MM-DD date. When a previousPublishDate is specified, this is typically required as well in order to generate the "Previous Version"
@@ -87,37 +109,18 @@ var respecConfig = {
   // Lints for accessibility issues using axe-core
   a11y: false,
 
-  // A number indicating the maximum depth of the table of contents. Defaults to 0 which includes all levels.
-  // maxTocLevel: 3,
-
-  // Shows links to alternate formats (such as PDF, ePub) in the document header.
-  // alternateFormats: [{
-  //     label: "html",
-  //     uri: "https://publicatie.centrumvoorstandaarden.nl/api/oauth/static.html",
-  //   },
-  //   {
-  //     label: "pdf",
-  //     uri: "https://publicatie.centrumvoorstandaarden.nl/api/oauth/static.pdf",
-  //   },
-  // ],
-
-  // You can use markdown to write ReSpec based documents.
-  // format: "markdown",
-  // TODO  Do not suse this config, it may cause a problem., use instead:
-  // <section data-format="markdown" data-include="<filename>.md"></section>
-
-
-  // The specification's publish domain, which is used to publish the specification
-  // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
-  pubDomain: "dk",
-  pubSubDomain: "beveilig",
-
+  alternateFormats: [
+    {
+      label: "pdf",
+      uri: "Digikoppeling-Beveiligingsstandaarden-en-voorschriften.pdf",
+    },
+  ],
   // For Consultatieversies (specStatus="GN-CV") there is a default text in the section "Status of this document" that contains an emailaddress for feedback and comments on the document.
   nl_emailComments: "digikoppeling@logius.nl",
   // this parameter will add the tag_name of the latest release to the document Title
   // only set this parameter when a release has been set
   nl_addReleaseTagTitle: true,
-  
+
   // if you use a single document for your spec, which uses more than one markdown H1 header, e.g. '# inleiding'
   // this configuration can be set to make sure that the alle H1 headers and navigation bars are preserved
   nl_markdownSplitH1sections: true,
@@ -192,7 +195,7 @@ var respecConfig = {
       date: "2020",
       publisher: "Logius",
     },
-    "Digikoppeling Identificatie-Authenticatie":{
+    "Digikoppeling Identificatie-Authenticatie": {
       href: "http://www.logius.nl/digikoppeling",
       title: "Digikoppeling Identificatie en Authenticatie",
       publisher: "Logius",
@@ -245,7 +248,7 @@ var respecConfig = {
       publisher: "NCSC",
     },
     "HTTPS-factsheet NCSC": {
-      href:"https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger",
+      href: "https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger",
       title: "Factsheet HTTPS kan een stuk veiliger",
       date: "Nov 2014",
       publisher: "NCSC",
