@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.4.0">
+<meta name="generator" content="ReSpec 28.1.0 Logius profile 20220106">
 <style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
@@ -41,8 +41,7 @@ dfn{cursor:pointer}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-.hljs{background:0 0!important}
-a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
 dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
@@ -84,368 +83,24 @@ details.respec-tests-details>li{padding-left:1em}
 a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 h2,h3,h4,h5,h6{position:relative}
 aside.example .marker>a.self-link{color:inherit}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
-h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
 @media (max-width:767px){
 dd{margin-left:0}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
 }
 @media print{
 .removeOnSave{display:none}
 }
 </style>
 <meta name="description" content="Dit document beschrijft de eisen die Digikoppeling stelt aan de beveiliging van de berichtuitwisseling.">
-<link rel="canonical" href="https://www.w3.org/TR/beveilig/">
-<script type="application/ld+json">{
-  "@context": [
-    "http://schema.org",
-    {
-      "@vocab": "http://schema.org/",
-      "@language": "nl",
-      "w3p": "http://www.w3.org/2001/02pd/rec54#",
-      "foaf": "http://xmlns.com/foaf/0.1/",
-      "datePublished": {
-        "@type": "http://www.w3.org/2001/XMLSchema#date"
-      },
-      "inLanguage": {
-        "@language": null
-      },
-      "isBasedOn": {
-        "@type": "@id"
-      },
-      "license": {
-        "@type": "@id"
-      }
-    }
-  ],
-  "id": "https://www.w3.org/TR/beveilig/",
-  "type": [
-    "TechArticle"
-  ],
-  "name": "Digikoppeling Beveiligingstandaarden en voorschriften 1.4",
-  "inLanguage": "nl",
-  "license": "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl",
-  "datePublished": "2021-02-01",
-  "copyrightHolder": {
-    "name": "World Wide Web Consortium",
-    "url": "https://www.w3.org/"
-  },
-  "discussionUrl": "https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/issues/",
-  "alternativeHeadline": "",
-  "isBasedOn": "https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/1.3/",
-  "description": "Dit document beschrijft de eisen die Digikoppeling stelt aan de beveiliging van de berichtuitwisseling.",
-  "editor": [
-    {
-      "type": "Person",
-      "name": "Peter Haasnoot",
-      "url": "https://logius.nl/standaarden"
-    },
-    {
-      "type": "Person",
-      "name": "Pieter Hering",
-      "foaf:mbox": "api@digikoppeling.nl",
-      "worksFor": {
-        "name": "Logius",
-        "url": "https://logius.nl/standaarden"
-      }
-    }
-  ],
-  "contributor": [
-    {
-      "type": "Person",
-      "name": "Pieter Hering",
-      "url": "https://logius.nl/standaarden"
-    }
-  ],
-  "citation": [
-    {
-      "id": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen",
-      "type": "TechArticle",
-      "name": "Programma van Eisen (PKIoverheid)",
-      "url": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen",
-      "publisher": {
-        "name": "Logius"
-      }
-    },
-    {
-      "id": "https://tools.ietf.org/html/rfc3447",
-      "type": "TechArticle",
-      "name": "Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.1",
-      "url": "https://tools.ietf.org/html/rfc3447",
-      "creator": [
-        {
-          "name": "J. Jonsson"
-        },
-        {
-          "name": "B. Kaliski"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners",
-      "type": "TechArticle",
-      "name": "Toegetreden vertrouwensdienstverleners",
-      "url": "https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners",
-      "publisher": {
-        "name": "Logius"
-      }
-    },
-    {
-      "id": "https://tools.ietf.org/html/rfc5246",
-      "type": "TechArticle",
-      "name": "The Transport Layer Security (TLS) Protocol Version 1.2",
-      "url": "https://tools.ietf.org/html/rfc5246",
-      "creator": [
-        {
-          "name": "T. Dierks"
-        },
-        {
-          "name": "E. Rescorla"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1",
-      "type": "TechArticle",
-      "name": "ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1",
-      "url": "https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1",
-      "publisher": {
-        "name": "NCSC"
-      }
-    },
-    {
-      "id": "https://tools.ietf.org/html/rfc8446",
-      "type": "TechArticle",
-      "name": "The Transport Layer Security (TLS) Protocol Version 1.3",
-      "url": "https://tools.ietf.org/html/rfc8446",
-      "creator": [
-        {
-          "name": "E. Rescorla"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://httpwg.org/specs/rfc2818.html",
-      "type": "TechArticle",
-      "name": "HTTP Over TLS",
-      "url": "https://httpwg.org/specs/rfc2818.html",
-      "creator": [
-        {
-          "name": "E. Rescorla"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://tools.ietf.org/html/rfc5785",
-      "type": "TechArticle",
-      "name": "Defining Well-Known Uniform Resource Identifiers (URIs)",
-      "url": "https://tools.ietf.org/html/rfc5785",
-      "creator": [
-        {
-          "name": "M. Nottingham"
-        },
-        {
-          "name": "E. Hammer-Lahav"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://httpwg.org/specs/rfc7230.html",
-      "type": "TechArticle",
-      "name": "Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing",
-      "url": "https://httpwg.org/specs/rfc7230.html",
-      "creator": [
-        {
-          "name": "R. Fielding, Ed."
-        },
-        {
-          "name": "J. Reschke, Ed."
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://tools.ietf.org/html/rfc5322",
-      "type": "TechArticle",
-      "name": "Internet Message Format",
-      "url": "https://tools.ietf.org/html/rfc5322",
-      "creator": [
-        {
-          "name": "P. Resnick, Ed."
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/xmlenc-core/",
-      "type": "TechArticle",
-      "name": "XML Encryption Syntax and Processing",
-      "url": "https://www.w3.org/TR/xmlenc-core/",
-      "creator": [
-        {
-          "name": "Donald Eastlake"
-        },
-        {
-          "name": "Joseph Reagle"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://www.w3.org/TR/xmldsig-core1/",
-      "type": "TechArticle",
-      "name": "XML Signature Syntax and Processing Version 1.1",
-      "url": "https://www.w3.org/TR/xmldsig-core1/",
-      "creator": [
-        {
-          "name": "Donald Eastlake"
-        },
-        {
-          "name": "Joseph Reagle"
-        },
-        {
-          "name": "David Solo"
-        },
-        {
-          "name": "Frederick Hirsch"
-        },
-        {
-          "name": "Magnus Nyström"
-        },
-        {
-          "name": "Thomas Roessler"
-        },
-        {
-          "name": "Kelvin Yiu"
-        }
-      ],
-      "publisher": {
-        "name": "W3C"
-      }
-    },
-    {
-      "id": "https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger",
-      "type": "TechArticle",
-      "name": "Factsheet HTTPS kan een stuk veiliger",
-      "url": "https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger",
-      "publisher": {
-        "name": "NCSC"
-      }
-    },
-    {
-      "id": "https://csrc.nist.gov/publications/fips/fips197/fips-197.pdf",
-      "type": "TechArticle",
-      "name": "NIST FIPS 197: Advanced Encryption Standard (AES)",
-      "url": "https://csrc.nist.gov/publications/fips/fips197/fips-197.pdf"
-    },
-    {
-      "id": "https://tools.ietf.org/html/rfc5756",
-      "type": "TechArticle",
-      "name": "Updates for RSAES-OAEP and RSASSA-PSS Algorithm Parameters",
-      "url": "https://tools.ietf.org/html/rfc5756",
-      "creator": [
-        {
-          "name": "S. Turner"
-        },
-        {
-          "name": "D. Brown"
-        },
-        {
-          "name": "K. Yiu"
-        },
-        {
-          "name": "R. Housley"
-        },
-        {
-          "name": "T. Polk"
-        }
-      ],
-      "publisher": {
-        "name": "IETF"
-      }
-    },
-    {
-      "id": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf",
-      "type": "TechArticle",
-      "name": "FIPS PUB 180-4 Secure Hash Standard",
-      "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf",
-      "publisher": {
-        "name": "U.S. Department of Commerce/National Institute of Standards and Technology"
-      }
-    },
-    {
-      "id": "https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-tls",
-      "type": "TechArticle",
-      "name": "ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.0",
-      "url": "https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-tls",
-      "publisher": {
-        "name": "NCSC"
-      }
-    },
-    {
-      "id": "http://www.logius.nl/digikoppeling",
-      "type": "TechArticle",
-      "name": "Digikoppeling Identificatie en Authenticatie",
-      "url": "http://www.logius.nl/digikoppeling",
-      "publisher": {
-        "name": "Logius"
-      }
-    },
-    {
-      "id": "http://www.logius.nl/digikoppeling",
-      "type": "TechArticle",
-      "name": "Gebruik en achtergrond van Digikoppeling certificaten",
-      "url": "http://www.logius.nl/digikoppeling",
-      "publisher": {
-        "name": "Logius"
-      }
-    },
-    {
-      "id": "https://www.logius.nl/diensten/pkioverheid",
-      "type": "TechArticle",
-      "name": "PKIoverheid",
-      "url": "https://www.logius.nl/diensten/pkioverheid",
-      "publisher": {
-        "name": "Logius"
-      }
-    },
-    {
-      "id": "https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html",
-      "type": "TechArticle",
-      "name": "Digikoppeling Architectuur",
-      "url": "https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html",
-      "creator": [
-        {
-          "name": "Logius Centrum voor standaarden"
-        }
-      ],
-      "publisher": {
-        "name": "Logius"
-      }
-    }
-  ]
-}</script>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
 <script id="initialUserConfig" type="application/json">{
   "specStatus": "DEF",
   "specType": "ST",
@@ -467,7 +122,8 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
       "name": "Pieter Hering",
       "mailto": "api@digikoppeling.nl",
       "company": "Logius",
-      "companyURL": "https://logius.nl/standaarden"
+      "companyURL": "https://logius.nl/standaarden",
+      "url": "mailto:api@digikoppeling.nl"
     }
   ],
   "authors": [
@@ -603,14 +259,16 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 }</script>
 <link rel="stylesheet" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/LS-DEF.css"></head>
 
-<body class="h-entry"><div class="head">
-    <a class="logo" href="https://www.logius.nl/standaarden"><img id="Logius" alt="Logius" width="44" height="77" src="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg"></a> <h1 id="title" class="title">Digikoppeling Beveiligingstandaarden en voorschriften 1.4</h1>
+<body class="h-entry toc-inline"><div class="head">
+    <a class="logo" href="https://www.logius.nl/standaarden"><img alt="Logius" height="77" id="Logius" src="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg" width="44">
+  </a> <h1 id="title" class="title">Digikoppeling Beveiligingstandaarden en voorschriften 1.4</h1>
     
     <h2>
       Logius Standaard<br>
       Vastgestelde versie
       <time class="dt-published" datetime="2021-02-01">01 februari 2021</time>
     </h2>
+	<a lang="nl" href="https://publicatie.centrumvoorstandaarden.nl/">Overzicht standaarden</a>
     <dl>
       <dt>Deze versie:</dt><dd class="status">
               <a class="u-url status" href="https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/1.4">https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/1.4</a>
@@ -624,11 +282,15 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
       <dt>Vorige versie</dt><dd><a href="https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/1.3/">https://publicatie.centrumvoorstandaarden.nl/dk/beveilig/1.3/</a></dd>
       
       <dt>Redacteurs:</dt>
-      <dd class="p-author h-card vcard"><a class="u-url url p-name fn" href="https://logius.nl/standaarden">Peter Haasnoot</a></dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:api@digikoppeling.nl">Pieter Hering</a>
-            (<a class="p-org org h-org h-card" href="https://logius.nl/standaarden">Logius</a>)
-          </dd>
+      <dd class="editor p-author h-card vcard">
+    <a class="u-url url p-name fn" href="https://logius.nl/standaarden">Peter Haasnoot</a>
+  </dd><dd class="editor p-author h-card vcard">
+    <a class="ed_mailto u-email email p-name" href="mailto:api@digikoppeling.nl">Pieter Hering</a> (<a class="p-org org h-org" href="https://logius.nl/standaarden">Logius</a>)
+  </dd>
       
-      <dt>Auteur:</dt><dd class="p-author h-card vcard"><a class="u-url url p-name fn" href="https://logius.nl/standaarden">Pieter Hering</a></dd>
+      <dt>Auteur:</dt><dd class="editor p-author h-card vcard">
+    <a class="u-url url p-name fn" href="https://logius.nl/standaarden">Pieter Hering</a>
+  </dd>
       <dt>Doe mee:</dt><dd>
     <a href="https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/">GitHub Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften</a>
   </dd><dd>
@@ -641,17 +303,17 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
     </dl>
     
     
-    <p>
+    <p lang="en">
           This document is also available in this non-normative format:
           <a rel="alternate" href="Digikoppeling-Beveiligingsstandaarden-en-voorschriften.pdf">pdf</a>
         </p>
-    <p class="copyright">
+    <p class="copyright" lang="en">
           This document is licensed under a
           <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="subfoot">Creative Commons Attribution 4.0 License</a>.
         </p>
     <hr title="Separator for header">
   </div>
-  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Dit document beschrijft de eisen die Digikoppeling stelt aan de beveiliging van de berichtuitwisseling.</p>
+  <section id="abstract" class="introductory"><h2 id="samenvatting">Samenvatting<a class="self-link" href="#abstract" aria-label="Permalink for Section"></a></h2><p>Dit document beschrijft de eisen die Digikoppeling stelt aan de beveiliging van de berichtuitwisseling.</p>
 
 <p>Dit document is bestemd voor architecten en ontwikkelaars van applicaties die gebruik maken van Digikoppeling om
     berichten tussen systemen veilig uit te wisselen.</p>
@@ -661,10 +323,7 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 
 <p>Doel van dit document is ontwikkelaars te informeren wat deze beveiligingsvoorschriften precies inhouden, welke
     standaarden en welke versies toegestaan zijn en partijen zich aan moeten conformeren.</p></section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>
-    Dit is de definitieve versie van de  standaard. Wijzigingen naar
-    aanleiding van consultaties zijn doorgevoerd.
-  </p><p>Het OBDO heeft op advies van het Forum Standaardisatie deze versie vastgesteld.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doel-en-doelgroep"><bdi class="secno">1.1 </bdi>Doel en Doelgroep</a></li><li class="tocline"><a class="tocxref" href="#digikoppeling"><bdi class="secno">1.2 </bdi>Digikoppeling</a></li><li class="tocline"><a class="tocxref" href="#digikoppeling-standaarden"><bdi class="secno">1.3 </bdi>Digikoppeling standaarden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#identificatie"><bdi class="secno">2. </bdi>Identificatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#wat-is-identificatie"><bdi class="secno">2.1 </bdi>Wat is identificatie?</a></li><li class="tocline"><a class="tocxref" href="#identificerend-nummer"><bdi class="secno">2.2 </bdi>Identificerend nummer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#pkioverheid-certificaten"><bdi class="secno">3. </bdi>PKIoverheid certificaten</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#standaarden"><bdi class="secno">3.1 </bdi>Standaarden</a></li><li class="tocline"><a class="tocxref" href="#wat-is-pkioverheid"><bdi class="secno">3.2 </bdi>Wat is PKIoverheid?</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#pkioverheid"><bdi class="secno">3.2.1 </bdi>PKIoverheid</a></li><li class="tocline"><a class="tocxref" href="#pkioverheid-certificaat"><bdi class="secno">3.2.2 </bdi>PKIoverheid certificaat</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voorschriften"><bdi class="secno">3.3 </bdi>Voorschriften</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#digikoppeling-voorschriften"><bdi class="secno">3.3.1 </bdi>Digikoppeling voorschriften</a></li><li class="tocline"><a class="tocxref" href="#pkioverheid-programma-van-eisen"><bdi class="secno">3.3.2 </bdi>PKIoverheid programma van eisen</a></li><li class="tocline"><a class="tocxref" href="#geldigheid"><bdi class="secno">3.3.3 </bdi>Geldigheid</a></li></ol></li><li class="tocline"><a class="tocxref" href="#best-practices"><bdi class="secno">3.4 </bdi>Best practices</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tls"><bdi class="secno">4. </bdi>TLS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#standaarden-0"><bdi class="secno">4.1 </bdi>Standaarden</a></li><li class="tocline"><a class="tocxref" href="#digikoppeling-voorschriften-0"><bdi class="secno">4.2 </bdi>Digikoppeling voorschriften</a></li><li class="tocline"><a class="tocxref" href="#onderbouwing"><bdi class="secno">4.3 </bdi>Onderbouwing</a></li><li class="tocline"><a class="tocxref" href="#overwegingen"><bdi class="secno">4.4 </bdi>Overwegingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#cipher-suites-voor-tls-signing-en-encryptie"><bdi class="secno">5. </bdi>Cipher suites voor TLS, signing en encryptie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#tls-ciphersuites"><bdi class="secno">5.1 </bdi>TLS Ciphersuites</a></li><li class="tocline"><a class="tocxref" href="#xml-signing"><bdi class="secno">5.2 </bdi>XML Signing</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#digikoppeling-voorschriften-voor-xml-signing"><bdi class="secno">5.2.1 </bdi>Digikoppeling voorschriften voor XML signing</a></li><li class="tocline"><a class="tocxref" href="#reden-voor-vervanging-sha-1-door-sha-2"><bdi class="secno">5.2.2 </bdi>Reden voor vervanging SHA-1 door SHA-2</a></li></ol></li><li class="tocline"><a class="tocxref" href="#xml-encryptie"><bdi class="secno">5.3 </bdi>XML Encryptie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#digikoppeling-voorschriften-voor-payload-encryptie"><bdi class="secno">5.3.1 </bdi>Digikoppeling voorschriften voor payload encryptie</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">6. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">A.1 </bdi>Normatieve referenties</a></li><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">A.2 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2 id="status-van-dit-document">Status van dit document<a class="self-link" href="#sotd" aria-label="Permalink for Section"></a></h2>Dit is de definitieve versie van de  standaard. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.<p>Het OBDO heeft op advies van het Forum Standaardisatie deze versie vastgesteld.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#doel-en-doelgroep"><bdi class="secno">1.1 </bdi>Doel en Doelgroep</a></li><li class="tocline"><a class="tocxref" href="#digikoppeling"><bdi class="secno">1.2 </bdi>Digikoppeling</a></li><li class="tocline"><a class="tocxref" href="#digikoppeling-standaarden"><bdi class="secno">1.3 </bdi>Digikoppeling standaarden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#identificatie"><bdi class="secno">2. </bdi>Identificatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#wat-is-identificatie"><bdi class="secno">2.1 </bdi>Wat is identificatie?</a></li><li class="tocline"><a class="tocxref" href="#identificerend-nummer"><bdi class="secno">2.2 </bdi>Identificerend nummer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#pkioverheid-certificaten"><bdi class="secno">3. </bdi>PKIoverheid certificaten</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#standaarden"><bdi class="secno">3.1 </bdi>Standaarden</a></li><li class="tocline"><a class="tocxref" href="#wat-is-pkioverheid"><bdi class="secno">3.2 </bdi>Wat is PKIoverheid?</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#pkioverheid"><bdi class="secno">3.2.1 </bdi>PKIoverheid</a></li><li class="tocline"><a class="tocxref" href="#pkioverheid-certificaat"><bdi class="secno">3.2.2 </bdi>PKIoverheid certificaat</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voorschriften"><bdi class="secno">3.3 </bdi>Voorschriften</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#digikoppeling-voorschriften"><bdi class="secno">3.3.1 </bdi>Digikoppeling voorschriften</a></li><li class="tocline"><a class="tocxref" href="#pkioverheid-programma-van-eisen"><bdi class="secno">3.3.2 </bdi>PKIoverheid programma van eisen</a></li><li class="tocline"><a class="tocxref" href="#geldigheid"><bdi class="secno">3.3.3 </bdi>Geldigheid</a></li></ol></li><li class="tocline"><a class="tocxref" href="#best-practices"><bdi class="secno">3.4 </bdi>Best practices</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tls"><bdi class="secno">4. </bdi>TLS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#standaarden-0"><bdi class="secno">4.1 </bdi>Standaarden</a></li><li class="tocline"><a class="tocxref" href="#digikoppeling-voorschriften-0"><bdi class="secno">4.2 </bdi>Digikoppeling voorschriften</a></li><li class="tocline"><a class="tocxref" href="#onderbouwing"><bdi class="secno">4.3 </bdi>Onderbouwing</a></li><li class="tocline"><a class="tocxref" href="#overwegingen"><bdi class="secno">4.4 </bdi>Overwegingen</a></li></ol></li><li class="tocline"><a class="tocxref" href="#cipher-suites-voor-tls-signing-en-encryptie"><bdi class="secno">5. </bdi>Cipher suites voor TLS, signing en encryptie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#tls-ciphersuites"><bdi class="secno">5.1 </bdi>TLS Ciphersuites</a></li><li class="tocline"><a class="tocxref" href="#xml-signing"><bdi class="secno">5.2 </bdi>XML Signing</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#digikoppeling-voorschriften-voor-xml-signing"><bdi class="secno">5.2.1 </bdi>Digikoppeling voorschriften voor XML signing</a></li><li class="tocline"><a class="tocxref" href="#reden-voor-vervanging-sha-1-door-sha-2"><bdi class="secno">5.2.2 </bdi>Reden voor vervanging SHA-1 door SHA-2</a></li></ol></li><li class="tocline"><a class="tocxref" href="#xml-encryptie"><bdi class="secno">5.3 </bdi>XML Encryptie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#digikoppeling-voorschriften-voor-payload-encryptie"><bdi class="secno">5.3.1 </bdi>Digikoppeling voorschriften voor payload encryptie</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">6. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">A.1 </bdi>Normatieve referenties</a></li><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">A.2 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
   <section class="introductory" data-format="markdown"><h1>Documentbeheer</h1><table class="dkkvs">
 <thead>
 <tr>
@@ -717,19 +376,22 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 <td>Postbus 96810 2509<br>JE Den Haag<br>t. 0900 555 4555 (10 ct p/m)<br>e.<a href="mailto:servicecentrum@logius.nl">servicecentrum@logius.nl</a></td>
 </tr>
 </tbody></table></section>
-  <section data-format="markdown" id="inleiding"><h2 id="x1-inleiding"><bdi class="secno">1. </bdi>Inleiding<a class="self-link" aria-label="§" href="#inleiding"></a></h2><section id="doel-en-doelgroep"><h3 id="x1-1-doel-en-doelgroep"><bdi class="secno">1.1 </bdi>Doel en Doelgroep<a class="self-link" aria-label="§" href="#doel-en-doelgroep"></a></h3><p>Dit document beschrijft de eisen die Digikoppeling stelt aan de beveiliging van de berichtuitwisseling.</p><p>Dit document is bestemd voor architecten en ontwikkelaars van applicaties die gebruik maken van Digikoppeling om berichten tussen systemen veilig uit te wisselen.</p><p>Alle Digikoppeling webservices moeten conformeren aan deze Digikoppeling beveiligingsstandaarden en voorschriften. Deze wordt in dit document gespecificeerd.</p><p>Doel van dit document is ontwikkelaars te informeren wat deze beveiligingsvoorschriften precies inhouden, welke standaarden en welke versies toegestaan zijn en partijen zich aan moeten conformeren.</p></section><section id="digikoppeling"><h3 id="x1-2-digikoppeling"><bdi class="secno">1.2 </bdi>Digikoppeling<a class="self-link" aria-label="§" href="#digikoppeling"></a></h3><p>Deze paragraaf bevat zeer beknopt een aantal hoofdpunten uit de overige documentatie.</p><p>Digikoppeling biedt de mogelijkheid om op een sterk gestandaardiseerde wijze berichten uit te wisselen tussen serviceaanbieders (service providers) en serviceafnemers (service requesters of consumers).</p><p>De uitwisseling tussen service providers en requesters wordt in drie lagen opgedeeld:</p><ul>
+  
+<section data-format="markdown" id="inleiding"><h2 id="x1-inleiding"><bdi class="secno">1. </bdi>Inleiding<a class="self-link" href="#inleiding" aria-label="Permalink for Section 1."></a></h2><section id="doel-en-doelgroep"><h3 id="x1-1-doel-en-doelgroep"><bdi class="secno">1.1 </bdi>Doel en Doelgroep<a class="self-link" href="#doel-en-doelgroep" aria-label="Permalink for Section 1.1"></a></h3><p>Dit document beschrijft de eisen die Digikoppeling stelt aan de beveiliging van de berichtuitwisseling.</p><p>Dit document is bestemd voor architecten en ontwikkelaars van applicaties die gebruik maken van Digikoppeling om berichten tussen systemen veilig uit te wisselen.</p><p>Alle Digikoppeling webservices moeten conformeren aan deze Digikoppeling beveiligingsstandaarden en voorschriften. Deze wordt in dit document gespecificeerd.</p><p>Doel van dit document is ontwikkelaars te informeren wat deze beveiligingsvoorschriften precies inhouden, welke standaarden en welke versies toegestaan zijn en partijen zich aan moeten conformeren.</p></section><section id="digikoppeling"><h3 id="x1-2-digikoppeling"><bdi class="secno">1.2 </bdi>Digikoppeling<a class="self-link" href="#digikoppeling" aria-label="Permalink for Section 1.2"></a></h3><p>Deze paragraaf bevat zeer beknopt een aantal hoofdpunten uit de overige documentatie.</p><p>Digikoppeling biedt de mogelijkheid om op een sterk gestandaardiseerde wijze berichten uit te wisselen tussen serviceaanbieders (service providers) en serviceafnemers (service requesters of consumers).</p><p>De uitwisseling tussen service providers en requesters wordt in drie lagen opgedeeld:</p><ul>
 <li><p>Inhoud: op deze laag worden de afspraken gemaakt over de inhoud van het uit te wisselen bericht, dus de structuur, semantiek, waardebereiken etc.<br>  Digikoppeling houdt zich niet met de inhoud bezig, ‘heeft geen boodschap aan de boodschap’.</p>
 </li>
 <li><p>Logistiek: op deze laag bevinden zich de afspraken betreffende transportprotocollen (HTTP &amp; TLS), messaging, beveiliging (authenticatie en encryptie) en betrouwbaarheid. Dit is de laag van Digikoppeling.</p>
 </li>
 <li><p>Transport: deze laag verzorgt het daadwerkelijke transport van het bericht (TCP/IP).</p>
 </li>
-</ul><p>Digikoppeling richt zich dus uitsluitend op de logistieke laag. Deze afspraken komen in de koppelvlakstandaarden en andere voorzieningen.</p><p>De koppelvlakstandaarden dienen te leiden tot een maximum aan interoperabiliteit met een minimum aan benodigde ontwikkelinspanning. Daarom is gekozen voor bewezen interoperabele internationale standaarden.</p></section><section id="digikoppeling-standaarden"><h3 id="x1-3-digikoppeling-standaarden"><bdi class="secno">1.3 </bdi>Digikoppeling standaarden<a class="self-link" aria-label="§" href="#digikoppeling-standaarden"></a></h3><p>De Digikoppeling standaarden bestaan uit de volgende documenten (groene blokken zijn onderdeel van de Digikoppeling standaard):</p><p><em>Specificatie van de koppelvlakstandaarden</em></p><p>De koppelvlakspecificatie beschrijft de eisen die gesteld worden aan de adapters om interoperabel met elkaar te kunnen communiceren. De hele set informatie die tezamen nodig is voor een complete generieke Digikoppeling koppelvlakdefinitie bestaat uit:</p><ul>
+</ul><p>Digikoppeling richt zich dus uitsluitend op de logistieke laag. Deze afspraken komen in de koppelvlakstandaarden en andere voorzieningen.</p><p>De koppelvlakstandaarden dienen te leiden tot een maximum aan interoperabiliteit met een minimum aan benodigde ontwikkelinspanning. Daarom is gekozen voor bewezen interoperabele internationale standaarden.</p></section><section id="digikoppeling-standaarden"><h3 id="x1-3-digikoppeling-standaarden"><bdi class="secno">1.3 </bdi>Digikoppeling standaarden<a class="self-link" href="#digikoppeling-standaarden" aria-label="Permalink for Section 1.3"></a></h3><p>De Digikoppeling standaarden bestaan uit de volgende documenten (groene blokken zijn onderdeel van de Digikoppeling standaard):</p><p><em>Specificatie van de koppelvlakstandaarden</em></p><p>De koppelvlakspecificatie beschrijft de eisen die gesteld worden aan de adapters om interoperabel met elkaar te kunnen communiceren. De hele set informatie die tezamen nodig is voor een complete generieke Digikoppeling koppelvlakdefinitie bestaat uit:</p><ul>
 <li><p>Interfacedefinitie.</p>
 </li>
 <li><p>Beveiligingsvoorschriften en standaarden voor de transport laag, signing en encryptie (cipher suites).</p>
 </li>
-</ul></section></section><section data-format="markdown" id="identificatie"><h2 id="x2-identificatie"><bdi class="secno">2. </bdi>Identificatie<a class="self-link" aria-label="§" href="#identificatie"></a></h2><section id="wat-is-identificatie"><h3 id="x2-1-wat-is-identificatie"><bdi class="secno">2.1 </bdi>Wat is identificatie?<a class="self-link" aria-label="§" href="#wat-is-identificatie"></a></h3><p>Een goede beveiliging van het berichtenverkeer begint met de identificatie van de partijen en de systemen waarmee zij berichten met elkaar uitwisselen. Identificatie houdt in dat de identiteit van de niet-natuurlijke persoon (organisatie) met grote zekerheid wordt vastgesteld.</p><p>De Digikoppeling standaarden schrijven voor hoe de berichtuitwisseling tussen systemen van verschillende organisaties plaats moet vinden. Deze organisaties en systemen worden geauthenticeerd aan de hand van een PKIoverheid certificaat met daarin een uniek identificerend nummer, het OIN.</p></section><section id="identificerend-nummer"><h3 id="x2-2-identificerend-nummer"><bdi class="secno">2.2 </bdi>Identificerend nummer<a class="self-link" aria-label="§" href="#identificerend-nummer"></a></h3><p>Het organisatie identificatienummer (OIN) is het identificerende nummer voor organisaties die gebruik maken van Digikoppeling. De partijen identificeren elkaar op basis van dit nummer.</p><p>De bron voor identificatie van organisaties is een erkend register dat is opgenomen in het OIN beleid. In de meeste gevallen is dit het Handelsregister. Het OIN kan worden opgezocht in het OIN Register.</p><p>Zie [<cite><a class="bibref" data-link-type="biblio" href="#bib-digikoppeling identificatie-authenticatie" title="Digikoppeling Identificatie en Authenticatie">Digikoppeling Identificatie-Authenticatie</a></cite>]] voor meer informatie.</p><p>Het OIN register is bereikbaar op <a href="https://portaal.digikoppeling.nl/registers/"><em>https://portaal.digikoppeling.nl/registers/</em></a>.</p></section></section><section data-format="markdown" id="pkioverheid-certificaten"><h2 id="x3-pkioverheid-certificaten"><bdi class="secno">3. </bdi>PKIoverheid certificaten<a class="self-link" aria-label="§" href="#pkioverheid-certificaten"></a></h2><section id="standaarden"><h3 id="x3-1-standaarden"><bdi class="secno">3.1 </bdi>Standaarden<a class="self-link" aria-label="§" href="#standaarden"></a></h3><table class="dkkvs">
+</ul></section></section>
+<section data-format="markdown" id="identificatie"><h2 id="x2-identificatie"><bdi class="secno">2. </bdi>Identificatie<a class="self-link" href="#identificatie" aria-label="Permalink for Section 2."></a></h2><section id="wat-is-identificatie"><h3 id="x2-1-wat-is-identificatie"><bdi class="secno">2.1 </bdi>Wat is identificatie?<a class="self-link" href="#wat-is-identificatie" aria-label="Permalink for Section 2.1"></a></h3><p>Een goede beveiliging van het berichtenverkeer begint met de identificatie van de partijen en de systemen waarmee zij berichten met elkaar uitwisselen. Identificatie houdt in dat de identiteit van de niet-natuurlijke persoon (organisatie) met grote zekerheid wordt vastgesteld.</p><p>De Digikoppeling standaarden schrijven voor hoe de berichtuitwisseling tussen systemen van verschillende organisaties plaats moet vinden. Deze organisaties en systemen worden geauthenticeerd aan de hand van een PKIoverheid certificaat met daarin een uniek identificerend nummer, het OIN.</p></section><section id="identificerend-nummer"><h3 id="x2-2-identificerend-nummer"><bdi class="secno">2.2 </bdi>Identificerend nummer<a class="self-link" href="#identificerend-nummer" aria-label="Permalink for Section 2.2"></a></h3><p>Het organisatie identificatienummer (OIN) is het identificerende nummer voor organisaties die gebruik maken van Digikoppeling. De partijen identificeren elkaar op basis van dit nummer.</p><p>De bron voor identificatie van organisaties is een erkend register dat is opgenomen in het OIN beleid. In de meeste gevallen is dit het Handelsregister. Het OIN kan worden opgezocht in het OIN Register.</p><p>Zie [<cite><a class="bibref" data-link-type="biblio" href="#bib-digikoppeling identificatie-authenticatie" title="Digikoppeling Identificatie en Authenticatie">Digikoppeling Identificatie-Authenticatie</a></cite>]] voor meer informatie.</p><p>Het OIN register is bereikbaar op <a href="https://portaal.digikoppeling.nl/registers/"><em>https://portaal.digikoppeling.nl/registers/</em></a>.</p></section></section>
+<section data-format="markdown" id="pkioverheid-certificaten"><h2 id="x3-pkioverheid-certificaten"><bdi class="secno">3. </bdi>PKIoverheid certificaten<a class="self-link" href="#pkioverheid-certificaten" aria-label="Permalink for Section 3."></a></h2><section id="standaarden"><h3 id="x3-1-standaarden"><bdi class="secno">3.1 </bdi>Standaarden<a class="self-link" href="#standaarden" aria-label="Permalink for Section 3.1"></a></h3><table class="dkkvs">
 <thead>
 <tr>
 <th>Standaarden</th>
@@ -742,7 +404,7 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 <td>Verplicht</td>
 <td>PKIoverheid Programma van Eisen [<cite><a class="bibref" data-link-type="biblio" href="#bib-pki policy" title="Programma van Eisen (PKIoverheid)">PKI Policy</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc3447" title="Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.1">rfc3447</a></cite>]</td>
 </tr>
-</tbody></table></section><section id="wat-is-pkioverheid"><h3 id="x3-2-wat-is-pkioverheid"><bdi class="secno">3.2 </bdi>Wat is PKIoverheid?<a class="self-link" aria-label="§" href="#wat-is-pkioverheid"></a></h3><section id="pkioverheid"><h4 id="x3-2-1-pkioverheid"><bdi class="secno">3.2.1 </bdi>PKIoverheid<a class="self-link" aria-label="§" href="#pkioverheid"></a></h4><p>PKIoverheid is de public key infrastructure in Nederland waarmee PKIoverheid certificaten worden uitgegeven en toegepast conform afspraken die zijn vastgelegd in het PKIoverheid Programma van Eisen.</p><p>Zie ook het document [<cite><a class="bibref" data-link-type="biblio" href="#bib-digikoppeling-cert" title="Gebruik en achtergrond van Digikoppeling certificaten">Digikoppeling-Cert</a></cite>] en [<cite><a class="bibref" data-link-type="biblio" href="#bib-pkioverheid" title="PKIoverheid">PKIoverheid</a></cite>]</p></section><section id="pkioverheid-certificaat"><h4 id="x3-2-2-pkioverheid-certificaat"><bdi class="secno">3.2.2 </bdi>PKIoverheid certificaat<a class="self-link" aria-label="§" href="#pkioverheid-certificaat"></a></h4><p>Het PKIoverheid-certificaat is een computerbestand dat werkt als een digitaal paspoort. Als iemand een website, e-mail of document van uw organisatie wil bekijken, controleert zijn webbrowser of e-mailprogramma het bijbehorende certificaat. Door elkaar te identificeren verkleint de kans dat oplichters zich voor kunnen doen als iemand anders. Digitale certificaten waarborgen dus betrouwbaarheid [<cite><a class="bibref" data-link-type="biblio" href="#bib-pkioverheid" title="PKIoverheid">PKIoverheid</a></cite>].</p><p>Digikoppeling vereist dat de communicatiepartners PKIoverheid private root certificaten gebruiken met een OIN om op een vertrouwelijke wijze gegevens uit te wisselen.</p></section></section><section id="voorschriften"><h3 id="x3-3-voorschriften"><bdi class="secno">3.3 </bdi>Voorschriften<a class="self-link" aria-label="§" href="#voorschriften"></a></h3><section id="digikoppeling-voorschriften"><h4 id="x3-3-1-digikoppeling-voorschriften"><bdi class="secno">3.3.1 </bdi>Digikoppeling voorschriften<a class="self-link" aria-label="§" href="#digikoppeling-voorschriften"></a></h4><table class="dkkvs">
+</tbody></table></section><section id="wat-is-pkioverheid"><h3 id="x3-2-wat-is-pkioverheid"><bdi class="secno">3.2 </bdi>Wat is PKIoverheid?<a class="self-link" href="#wat-is-pkioverheid" aria-label="Permalink for Section 3.2"></a></h3><section id="pkioverheid"><h4 id="x3-2-1-pkioverheid"><bdi class="secno">3.2.1 </bdi>PKIoverheid<a class="self-link" href="#pkioverheid" aria-label="Permalink for Section 3.2.1"></a></h4><p>PKIoverheid is de public key infrastructure in Nederland waarmee PKIoverheid certificaten worden uitgegeven en toegepast conform afspraken die zijn vastgelegd in het PKIoverheid Programma van Eisen.</p><p>Zie ook het document [<cite><a class="bibref" data-link-type="biblio" href="#bib-digikoppeling-cert" title="Gebruik en achtergrond van Digikoppeling certificaten">Digikoppeling-Cert</a></cite>] en [<cite><a class="bibref" data-link-type="biblio" href="#bib-pkioverheid" title="PKIoverheid">PKIoverheid</a></cite>]</p></section><section id="pkioverheid-certificaat"><h4 id="x3-2-2-pkioverheid-certificaat"><bdi class="secno">3.2.2 </bdi>PKIoverheid certificaat<a class="self-link" href="#pkioverheid-certificaat" aria-label="Permalink for Section 3.2.2"></a></h4><p>Het PKIoverheid-certificaat is een computerbestand dat werkt als een digitaal paspoort. Als iemand een website, e-mail of document van uw organisatie wil bekijken, controleert zijn webbrowser of e-mailprogramma het bijbehorende certificaat. Door elkaar te identificeren verkleint de kans dat oplichters zich voor kunnen doen als iemand anders. Digitale certificaten waarborgen dus betrouwbaarheid [<cite><a class="bibref" data-link-type="biblio" href="#bib-pkioverheid" title="PKIoverheid">PKIoverheid</a></cite>].</p><p>Digikoppeling vereist dat de communicatiepartners PKIoverheid private root certificaten gebruiken met een OIN om op een vertrouwelijke wijze gegevens uit te wisselen.</p></section></section><section id="voorschriften"><h3 id="x3-3-voorschriften"><bdi class="secno">3.3 </bdi>Voorschriften<a class="self-link" href="#voorschriften" aria-label="Permalink for Section 3.3"></a></h3><section id="digikoppeling-voorschriften"><h4 id="x3-3-1-digikoppeling-voorschriften"><bdi class="secno">3.3.1 </bdi>Digikoppeling voorschriften<a class="self-link" href="#digikoppeling-voorschriften" aria-label="Permalink for Section 3.3.1"></a></h4><table class="dkkvs">
 <thead>
 <tr>
 <th>Nr</th>
@@ -775,14 +437,15 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 <td>Het certificaat moet zijn van het type PKIoverheid private root (PKI Staat der Nederlanden Private Root) <sup>1</sup>. <br><br><sup>1</sup> Uitzondering is wanneer er in het kader van certificaatbeheer op 1 server reden is om PKIO public root certificaten te gebruiken voor zowel koppeling als voor webserver. Hier dienen dan bilateraal afspraken over te worden gemaakt tussen de partijen.<br>(Bij gebruik van PKIO public root certificaten is een specifieke eis en aandachtspunt dat deze vanwege externe regelgeving altijd binnen drie tot vijf dagen vervangen moeten kunnen worden.)<br>Deze uitzondering is toegestaan tot 01-12-2022<br><br>Voor Serviceaanbieders  en Servicegebruikers geldt dat zij uiterlijk per 1-1-2021 gebruik moeten maken van private root certificaten</td>
 <td>PKIOverheid geeft aan dat voor machine-naar-machine (M2M) verkeer (zoals Digikoppeling) Private root certificaten gebruikt dienen te worden.</td>
 </tr>
-</tbody></table></section><section id="pkioverheid-programma-van-eisen"><h4 id="x3-3-2-pkioverheid-programma-van-eisen"><bdi class="secno">3.3.2 </bdi>PKIoverheid programma van eisen<a class="self-link" aria-label="§" href="#pkioverheid-programma-van-eisen"></a></h4><ol>
+</tbody></table></section><section id="pkioverheid-programma-van-eisen"><h4 id="x3-3-2-pkioverheid-programma-van-eisen"><bdi class="secno">3.3.2 </bdi>PKIoverheid programma van eisen<a class="self-link" href="#pkioverheid-programma-van-eisen" aria-label="Permalink for Section 3.3.2"></a></h4><ol>
 <li><p>Een PKIoverheid certificaat dient conform de eisen van het PKIoverheid PvE te worden uitgegeven door de Trust Service Providers (TSP).</p>
 </li>
 <li><p>De te gebruiken certificaten in de productie omgeving voldoen aan de eisen van PKIoverheid (PvE) en de inhoud van de identificerende velden in het certificaat dienen te voldoen aan de afspraken zoals gesteld in de functionele eisen in het document [<cite><a class="bibref" data-link-type="biblio" href="#bib-digikoppeling identificatie-authenticatie" title="Digikoppeling Identificatie en Authenticatie">Digikoppeling Identificatie-Authenticatie</a></cite>]. Met het toepassen van PKIoverheid-certificaten die Digikoppeling compliant zijn, wordt hieraan voldaan.</p>
 </li>
 <li><p>Certificaten voor productie wijken af van certificaten voor test doordat zij op verschillende ‘roots’ zijn gebaseerd, respectievelijk 'Staat der Nederlanden Root Private Root’ en ‘PKI TRIAL root’.</p>
 </li>
-</ol></section><section id="geldigheid"><h4 id="x3-3-3-geldigheid"><bdi class="secno">3.3.3 </bdi>Geldigheid<a class="self-link" aria-label="§" href="#geldigheid"></a></h4><p>De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List(CRL) die voldoet aan de eisen van PKI-overheid. Zie eis PKI002 en PKI003</p><p>De betreffende CRL dient zowel voor de versturende als ontvangende partij te benaderen zijn. Zie eis PKI004 (WT005)</p><p>Een certificaat dient te worden ingetrokken als de organisatie niet meer bestaat of als de private sleutel gecompromitteerd is.</p></section></section><section id="best-practices"><h3 id="x3-4-best-practices"><bdi class="secno">3.4 </bdi>Best practices<a class="self-link" aria-label="§" href="#best-practices"></a></h3><p>De best practices voor inrichting en gebruik zijn beschreven in <em>Gebruik en achtergronden Digikoppeling certificaten</em>.</p></section></section><section data-format="markdown" id="tls"><h2 id="x4-tls"><bdi class="secno">4. </bdi>TLS<a class="self-link" aria-label="§" href="#tls"></a></h2><section id="standaarden-0"><h3 id="x4-1-standaarden"><bdi class="secno">4.1 </bdi>Standaarden<a class="self-link" aria-label="§" href="#standaarden-0"></a></h3><table class="dkkvs">
+</ol></section><section id="geldigheid"><h4 id="x3-3-3-geldigheid"><bdi class="secno">3.3.3 </bdi>Geldigheid<a class="self-link" href="#geldigheid" aria-label="Permalink for Section 3.3.3"></a></h4><p>De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List(CRL) die voldoet aan de eisen van PKI-overheid. Zie eis PKI002 en PKI003</p><p>De betreffende CRL dient zowel voor de versturende als ontvangende partij te benaderen zijn. Zie eis PKI004 (WT005)</p><p>Een certificaat dient te worden ingetrokken als de organisatie niet meer bestaat of als de private sleutel gecompromitteerd is.</p></section></section><section id="best-practices"><h3 id="x3-4-best-practices"><bdi class="secno">3.4 </bdi>Best practices<a class="self-link" href="#best-practices" aria-label="Permalink for Section 3.4"></a></h3><p>De best practices voor inrichting en gebruik zijn beschreven in <em>Gebruik en achtergronden Digikoppeling certificaten</em>.</p></section></section>
+<section data-format="markdown" id="tls"><h2 id="x4-tls"><bdi class="secno">4. </bdi>TLS<a class="self-link" href="#tls" aria-label="Permalink for Section 4."></a></h2><section id="standaarden-0"><h3 id="x4-1-standaarden"><bdi class="secno">4.1 </bdi>Standaarden<a class="self-link" href="#standaarden-0" aria-label="Permalink for Section 4.1"></a></h3><table class="dkkvs">
 <thead>
 <tr>
 <th>Standaarden</th>
@@ -805,7 +468,7 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 <td>Informational</td>
 <td>IETF [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc5322" title="Internet Message Format">rfc5322</a></cite>]</td>
 </tr>
-</tbody></table></section><section id="digikoppeling-voorschriften-0"><h3 id="x4-2-digikoppeling-voorschriften"><bdi class="secno">4.2 </bdi>Digikoppeling voorschriften<a class="self-link" aria-label="§" href="#digikoppeling-voorschriften-0"></a></h3><table class="dkkvs">
+</tbody></table></section><section id="digikoppeling-voorschriften-0"><h3 id="x4-2-digikoppeling-voorschriften"><bdi class="secno">4.2 </bdi>Digikoppeling voorschriften<a class="self-link" href="#digikoppeling-voorschriften-0" aria-label="Permalink for Section 4.2"></a></h3><table class="dkkvs">
 <thead>
 <tr>
 <th>Nr</th>
@@ -848,7 +511,8 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 <td>Het is verplicht te voldoen aan de NCSC ICT-beveiligingsrichtlijnen voor TLS</td>
 <td>Zie H3 van [<cite><a class="bibref" data-link-type="biblio" href="#bib-ncsc 2021" title="ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1">NCSC 2021</a></cite>]</td>
 </tr>
-</tbody></table></section><section id="onderbouwing"><h3 id="x4-3-onderbouwing"><bdi class="secno">4.3 </bdi>Onderbouwing<a class="self-link" aria-label="§" href="#onderbouwing"></a></h3><p>Zowel de Digikoppeling-koppelvlakstandaard ebMS2 als de Digikoppeling-koppelvlakstandaard WUS en Digikopppeling-koppelvlakstandaard Grote Berichten schrijven het gebruik voor van (tweezijdig) TLS om de berichtenstroom te beveiligen. Het protocol TLS heeft betrekking op het communicatiekanaal. De Digikoppeling-koppelvlakstandaarden stellen deze eis dus aan de transportlaag en aan de authenticatie van organisaties.</p><p>In Digikoppeling is ervoor gekozen om PKIoverheid certificaten te gebruiken op het niveau van het communicatiekanaal (TLS) om de directe communicatiepartners te authenticeren. TLS kan niet toegepast worden om end-to-end authenticatie uit te voeren in een multi-hop (voor ebMS2) omgeving; zie daarvoor berichtniveau beveiliging in de [<cite><a class="bibref" data-link-type="biblio" href="#bib-digikoppeling architectuur" title="Digikoppeling Architectuur">Digikoppeling Architectuur</a></cite>] documentatie.</p></section><section id="overwegingen"><h3 id="x4-4-overwegingen"><bdi class="secno">4.4 </bdi>Overwegingen<a class="self-link" aria-label="§" href="#overwegingen"></a></h3><p>Het NCSC adviseert om TLS altijd te configureren op basis van [<cite><a class="bibref" data-link-type="biblio" href="#bib-ncsc 2021" title="ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1">NCSC 2021</a></cite>] voor Transport Layer Security].</p></section></section><section data-format="markdown" id="cipher-suites-voor-tls-signing-en-encryptie"><h2 id="x5-cipher-suites-voor-tls-signing-en-encryptie"><bdi class="secno">5. </bdi>Cipher suites voor TLS, signing en encryptie<a class="self-link" aria-label="§" href="#cipher-suites-voor-tls-signing-en-encryptie"></a></h2><section id="tls-ciphersuites"><h3 id="x5-1-tls-ciphersuites"><bdi class="secno">5.1 </bdi>TLS Ciphersuites<a class="self-link" aria-label="§" href="#tls-ciphersuites"></a></h3><table class="dkkvs">
+</tbody></table></section><section id="onderbouwing"><h3 id="x4-3-onderbouwing"><bdi class="secno">4.3 </bdi>Onderbouwing<a class="self-link" href="#onderbouwing" aria-label="Permalink for Section 4.3"></a></h3><p>Zowel de Digikoppeling-koppelvlakstandaard ebMS2 als de Digikoppeling-koppelvlakstandaard WUS en Digikopppeling-koppelvlakstandaard Grote Berichten schrijven het gebruik voor van (tweezijdig) TLS om de berichtenstroom te beveiligen. Het protocol TLS heeft betrekking op het communicatiekanaal. De Digikoppeling-koppelvlakstandaarden stellen deze eis dus aan de transportlaag en aan de authenticatie van organisaties.</p><p>In Digikoppeling is ervoor gekozen om PKIoverheid certificaten te gebruiken op het niveau van het communicatiekanaal (TLS) om de directe communicatiepartners te authenticeren. TLS kan niet toegepast worden om end-to-end authenticatie uit te voeren in een multi-hop (voor ebMS2) omgeving; zie daarvoor berichtniveau beveiliging in de [<cite><a class="bibref" data-link-type="biblio" href="#bib-digikoppeling architectuur" title="Digikoppeling Architectuur">Digikoppeling Architectuur</a></cite>] documentatie.</p></section><section id="overwegingen"><h3 id="x4-4-overwegingen"><bdi class="secno">4.4 </bdi>Overwegingen<a class="self-link" href="#overwegingen" aria-label="Permalink for Section 4.4"></a></h3><p>Het NCSC adviseert om TLS altijd te configureren op basis van [<cite><a class="bibref" data-link-type="biblio" href="#bib-ncsc 2021" title="ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1">NCSC 2021</a></cite>] voor Transport Layer Security].</p></section></section>
+<section data-format="markdown" id="cipher-suites-voor-tls-signing-en-encryptie"><h2 id="x5-cipher-suites-voor-tls-signing-en-encryptie"><bdi class="secno">5. </bdi>Cipher suites voor TLS, signing en encryptie<a class="self-link" href="#cipher-suites-voor-tls-signing-en-encryptie" aria-label="Permalink for Section 5."></a></h2><section id="tls-ciphersuites"><h3 id="x5-1-tls-ciphersuites"><bdi class="secno">5.1 </bdi>TLS Ciphersuites<a class="self-link" href="#tls-ciphersuites" aria-label="Permalink for Section 5.1"></a></h3><table class="dkkvs">
 <thead>
 <tr>
 <th>Nr</th>
@@ -861,7 +525,7 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 <td>De gebruikte TLS cryptografische algoritmen moeten de NCSC classificatie ‘voldoende’ of ‘goed’ hebben.  TLS cryptografische algoritmen met de NCSC classificatie ‘uit te faseren’ dienen zo spoedig mogelijk maar uiterlijk 01-01-2021 te worden uitgefaseerd.</td>
 <td>Zie  [<cite><a class="bibref" data-link-type="biblio" href="#bib-ncsc 2021" title="ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1">NCSC 2021</a></cite>]</td>
 </tr>
-</tbody></table></section><section id="xml-signing"><h3 id="x5-2-xml-signing"><bdi class="secno">5.2 </bdi>XML Signing<a class="self-link" aria-label="§" href="#xml-signing"></a></h3><section id="digikoppeling-voorschriften-voor-xml-signing"><h4 id="x5-2-1-digikoppeling-voorschriften-voor-xml-signing"><bdi class="secno">5.2.1 </bdi>Digikoppeling voorschriften voor XML signing<a class="self-link" aria-label="§" href="#digikoppeling-voorschriften-voor-xml-signing"></a></h4><table class="dkkvs">
+</tbody></table></section><section id="xml-signing"><h3 id="x5-2-xml-signing"><bdi class="secno">5.2 </bdi>XML Signing<a class="self-link" href="#xml-signing" aria-label="Permalink for Section 5.2"></a></h3><section id="digikoppeling-voorschriften-voor-xml-signing"><h4 id="x5-2-1-digikoppeling-voorschriften-voor-xml-signing"><bdi class="secno">5.2.1 </bdi>Digikoppeling voorschriften voor XML signing<a class="self-link" href="#digikoppeling-voorschriften-voor-xml-signing" aria-label="Permalink for Section 5.2.1"></a></h4><table class="dkkvs">
 <thead>
 <tr>
 <th>Nr</th>
@@ -889,14 +553,14 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 <td>Het SignatureMethod Algorithm kan gebruik maken van een van de volgende algoritmen: [SHA-224]  [SHA-256] [SHA-384] [SHA-512]</td>
 <td>Zie ook <a href="https://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod">https://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod</a> voor voorbeelden</td>
 </tr>
-</tbody></table></section><section id="reden-voor-vervanging-sha-1-door-sha-2"><h4 id="x5-2-2-reden-voor-vervanging-sha-1-door-sha-2"><bdi class="secno">5.2.2 </bdi>Reden voor vervanging SHA-1 door SHA-2<a class="self-link" aria-label="§" href="#reden-voor-vervanging-sha-1-door-sha-2"></a></h4><p><em>Certificaten met SHA-1 als hashfunctie worden vervangen door certificaten met hashfuncties uit de SHA-2-familie: SHA-256, SHA-384 en SHA-512. Certificaten met MD5 als hashfunctie zijn enkele jaren geleden al vervangen. MD5 is de voorloper van SHA-1. [<cite><a class="bibref" data-link-type="biblio" href="#bib-https-factsheet ncsc" title="Factsheet HTTPS kan een stuk veiliger">HTTPS-factsheet NCSC</a></cite>]</em></p><p>PKIoverheid stelt SHA-2 als eis. Alle certificaten die onder de root Staat der Nederlanden worden uitgegeven moeten voldoen aan SHA-2. In [<cite><a class="bibref" data-link-type="biblio" href="#bib-ncsc 2021" title="ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1">NCSC 2021</a></cite>] wordt SHA-1 nog wel als ‘voldoende’ bestempeld voor hashing binnen een applicatie, maar voor signing is het onvoldoende.</p><p>In plaats daarvan is het dus wenselijk om gebruik te maken van een algoritme dat als ‘goed’ is aangemerkt, dus:</p><ul>
+</tbody></table></section><section id="reden-voor-vervanging-sha-1-door-sha-2"><h4 id="x5-2-2-reden-voor-vervanging-sha-1-door-sha-2"><bdi class="secno">5.2.2 </bdi>Reden voor vervanging SHA-1 door SHA-2<a class="self-link" href="#reden-voor-vervanging-sha-1-door-sha-2" aria-label="Permalink for Section 5.2.2"></a></h4><p><em>Certificaten met SHA-1 als hashfunctie worden vervangen door certificaten met hashfuncties uit de SHA-2-familie: SHA-256, SHA-384 en SHA-512. Certificaten met MD5 als hashfunctie zijn enkele jaren geleden al vervangen. MD5 is de voorloper van SHA-1. [<cite><a class="bibref" data-link-type="biblio" href="#bib-https-factsheet ncsc" title="Factsheet HTTPS kan een stuk veiliger">HTTPS-factsheet NCSC</a></cite>]</em></p><p>PKIoverheid stelt SHA-2 als eis. Alle certificaten die onder de root Staat der Nederlanden worden uitgegeven moeten voldoen aan SHA-2. In [<cite><a class="bibref" data-link-type="biblio" href="#bib-ncsc 2021" title="ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1">NCSC 2021</a></cite>] wordt SHA-1 nog wel als ‘voldoende’ bestempeld voor hashing binnen een applicatie, maar voor signing is het onvoldoende.</p><p>In plaats daarvan is het dus wenselijk om gebruik te maken van een algoritme dat als ‘goed’ is aangemerkt, dus:</p><ul>
 <li><p>SHA-512,</p>
 </li>
 <li><p>SHA-384 of</p>
 </li>
 <li><p>SHA-256</p>
 </li>
-</ul></section></section><section id="xml-encryptie"><h3 id="x5-3-xml-encryptie"><bdi class="secno">5.3 </bdi>XML Encryptie<a class="self-link" aria-label="§" href="#xml-encryptie"></a></h3><section id="digikoppeling-voorschriften-voor-payload-encryptie"><h4 id="x5-3-1-digikoppeling-voorschriften-voor-payload-encryptie"><bdi class="secno">5.3.1 </bdi>Digikoppeling voorschriften voor payload encryptie<a class="self-link" aria-label="§" href="#digikoppeling-voorschriften-voor-payload-encryptie"></a></h4><table class="dkkvs">
+</ul></section></section><section id="xml-encryptie"><h3 id="x5-3-xml-encryptie"><bdi class="secno">5.3 </bdi>XML Encryptie<a class="self-link" href="#xml-encryptie" aria-label="Permalink for Section 5.3"></a></h3><section id="digikoppeling-voorschriften-voor-payload-encryptie"><h4 id="x5-3-1-digikoppeling-voorschriften-voor-payload-encryptie"><bdi class="secno">5.3.1 </bdi>Digikoppeling voorschriften voor payload encryptie<a class="self-link" href="#digikoppeling-voorschriften-voor-payload-encryptie" aria-label="Permalink for Section 5.3.1"></a></h4><table class="dkkvs">
 <thead>
 <tr>
 <th>Nr</th>
@@ -927,7 +591,7 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 </tbody></table></section></section></section>
 
   
-  <section id="conformance"><h2 id="x6-conformiteit"><bdi class="secno">6. </bdi>Conformiteit<a class="self-link" aria-label="§" href="#conformance"></a></h2><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p>
+  <section id="conformance"><h2 id="x6-conformiteit"><bdi class="secno">6. </bdi>Conformiteit<a class="self-link" href="#conformance" aria-label="Permalink for Section 6."></a></h2><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p>
     
   </section>
 
@@ -948,39 +612,50 @@ h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:
 
 
 
-<section id="references" class="appendix"><h2 id="a-referenties"><bdi class="secno">A. </bdi>Referenties<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normatieve-referenties">
-    <h3 id="a-1-normatieve-referenties"><bdi class="secno">A.1 </bdi>Normatieve referenties<a class="self-link" aria-label="§" href="#normatieve-referenties"></a></h3>
-    <dl class="bibliography"><dt id="bib-aes">[AES]</dt><dd><a href="https://csrc.nist.gov/publications/fips/fips197/fips-197.pdf"><cite>NIST FIPS 197: Advanced Encryption Standard (AES)</cite></a>. November 2001. URL: <a href="https://csrc.nist.gov/publications/fips/fips197/fips-197.pdf">https://csrc.nist.gov/publications/fips/fips197/fips-197.pdf</a></dd><dt id="bib-fips-180-4">[FIPS-180-4]</dt><dd><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf"><cite>FIPS PUB 180-4 Secure Hash Standard</cite></a>.  U.S. Department of Commerce/National Institute of Standards and Technology. URL: <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf</a></dd><dt id="bib-https-factsheet ncsc">[HTTPS-factsheet NCSC]</dt><dd><a href="https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger"><cite>Factsheet HTTPS kan een stuk veiliger</cite></a>.  NCSC. Nov 2014. URL: <a href="https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger">https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger</a></dd><dt id="bib-ncsc 2021">[NCSC 2021]</dt><dd><a href="https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1"><cite>ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1</cite></a>.  NCSC. Jan 2021. URL: <a href="https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1">https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1</a></dd><dt id="bib-pki ca">[PKI CA]</dt><dd><a href="https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners"><cite>Toegetreden vertrouwensdienstverleners</cite></a>.  Logius. URL: <a href="https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners">https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners</a></dd><dt id="bib-pki policy">[PKI Policy]</dt><dd><a href="https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen"><cite>Programma van Eisen (PKIoverheid)</cite></a>.  Logius. URL: <a href="https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen">https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen</a></dd><dt id="bib-rfc2818">[rfc2818]</dt><dd><a href="https://httpwg.org/specs/rfc2818.html"><cite>HTTP Over TLS</cite></a>. E. Rescorla.  IETF. May 2000. Informational. URL: <a href="https://httpwg.org/specs/rfc2818.html">https://httpwg.org/specs/rfc2818.html</a></dd><dt id="bib-rfc3447">[rfc3447]</dt><dd><a href="https://tools.ietf.org/html/rfc3447"><cite>Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.1</cite></a>. J. Jonsson; B. Kaliski.  IETF. February 2003. Informational. URL: <a href="https://tools.ietf.org/html/rfc3447">https://tools.ietf.org/html/rfc3447</a></dd><dt id="bib-rfc5246">[rfc5246]</dt><dd><a href="https://tools.ietf.org/html/rfc5246"><cite>The Transport Layer Security (TLS) Protocol Version 1.2</cite></a>. T. Dierks; E. Rescorla.  IETF. August 2008. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc5246">https://tools.ietf.org/html/rfc5246</a></dd><dt id="bib-rfc5322">[rfc5322]</dt><dd><a href="https://tools.ietf.org/html/rfc5322"><cite>Internet Message Format</cite></a>. P. Resnick, Ed..  IETF. October 2008. Draft Standard. URL: <a href="https://tools.ietf.org/html/rfc5322">https://tools.ietf.org/html/rfc5322</a></dd><dt id="bib-rfc5756">[rfc5756]</dt><dd><a href="https://tools.ietf.org/html/rfc5756"><cite>Updates for RSAES-OAEP and RSASSA-PSS Algorithm Parameters</cite></a>. S. Turner; D. Brown; K. Yiu; R. Housley; T. Polk.  IETF. January 2010. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc5756">https://tools.ietf.org/html/rfc5756</a></dd><dt id="bib-rfc5785">[rfc5785]</dt><dd><a href="https://tools.ietf.org/html/rfc5785"><cite>Defining Well-Known Uniform Resource Identifiers (URIs)</cite></a>. M. Nottingham; E. Hammer-Lahav.  IETF. April 2010. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc5785">https://tools.ietf.org/html/rfc5785</a></dd><dt id="bib-rfc7230">[rfc7230]</dt><dd><a href="https://httpwg.org/specs/rfc7230.html"><cite>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</cite></a>. R. Fielding, Ed.; J. Reschke, Ed..  IETF. June 2014. Proposed Standard. URL: <a href="https://httpwg.org/specs/rfc7230.html">https://httpwg.org/specs/rfc7230.html</a></dd><dt id="bib-rfc8446">[rfc8446]</dt><dd><a href="https://tools.ietf.org/html/rfc8446"><cite>The Transport Layer Security (TLS) Protocol Version 1.3</cite></a>. E. Rescorla.  IETF. August 2018. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc8446">https://tools.ietf.org/html/rfc8446</a></dd><dt id="bib-xmldsig-core1">[xmldsig-core1]</dt><dd><a href="https://www.w3.org/TR/xmldsig-core1/"><cite>XML Signature Syntax and Processing Version 1.1</cite></a>. Donald Eastlake; Joseph Reagle; David Solo; Frederick Hirsch; Magnus Nyström; Thomas Roessler; Kelvin Yiu.  W3C. 11 April 2013. W3C Recommendation. URL: <a href="https://www.w3.org/TR/xmldsig-core1/">https://www.w3.org/TR/xmldsig-core1/</a></dd><dt id="bib-xmlenc-core">[xmlenc-core]</dt><dd><a href="https://www.w3.org/TR/xmlenc-core/"><cite>XML Encryption Syntax and Processing</cite></a>. Donald Eastlake; Joseph Reagle.  W3C. 10 December 2002. W3C Recommendation. URL: <a href="https://www.w3.org/TR/xmlenc-core/">https://www.w3.org/TR/xmlenc-core/</a></dd></dl>
+<section id="references" class="appendix"><h2 id="a-referenties"><bdi class="secno">A. </bdi>Referenties<a class="self-link" href="#references" aria-label="Permalink for Appendix A."></a></h2><section id="normatieve-referenties">
+    <h3 id="a-1-normatieve-referenties"><bdi class="secno">A.1 </bdi>Normatieve referenties<a class="self-link" href="#normatieve-referenties" aria-label="Permalink for Appendix A.1"></a></h3>
+    <dl class="bibliography"><dt id="bib-aes">[AES]</dt><dd><a href="https://csrc.nist.gov/publications/fips/fips197/fips-197.pdf"><cite>NIST FIPS 197: Advanced Encryption Standard (AES)</cite></a>. November 2001. URL: <a href="https://csrc.nist.gov/publications/fips/fips197/fips-197.pdf">https://csrc.nist.gov/publications/fips/fips197/fips-197.pdf</a></dd><dt id="bib-fips-180-4">[FIPS-180-4]</dt><dd><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf"><cite>FIPS PUB 180-4 Secure Hash Standard</cite></a>.  U.S. Department of Commerce/National Institute of Standards and Technology. URL: <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf</a></dd><dt id="bib-https-factsheet ncsc">[HTTPS-factsheet NCSC]</dt><dd><a href="https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger"><cite>Factsheet HTTPS kan een stuk veiliger</cite></a>.  NCSC. Nov 2014. URL: <a href="https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger">https://www.ncsc.nl/documenten/factsheets/2019/juni/01/factsheet-https-kan-een-stuk-veiliger</a></dd><dt id="bib-ncsc 2021">[NCSC 2021]</dt><dd><a href="https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1"><cite>ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.1</cite></a>.  NCSC. Jan 2021. URL: <a href="https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1">https://www.ncsc.nl/documenten/publicaties/2021/januari/19/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2.1</a></dd><dt id="bib-pki ca">[PKI CA]</dt><dd><a href="https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners"><cite>Toegetreden vertrouwensdienstverleners</cite></a>.  Logius. URL: <a href="https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners">https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/toegetreden-vertrouwensdienstverleners</a></dd><dt id="bib-pki policy">[PKI Policy]</dt><dd><a href="https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen"><cite>Programma van Eisen (PKIoverheid)</cite></a>.  Logius. URL: <a href="https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen">https://www.logius.nl/diensten/pkioverheid/aansluiten-als-tsp/pogramma-van-eisen</a></dd><dt id="bib-rfc2818">[rfc2818]</dt><dd><a href="https://httpwg.org/specs/rfc2818.html"><cite>HTTP Over TLS</cite></a>. E. Rescorla.  IETF. May 2000. Informational. URL: <a href="https://httpwg.org/specs/rfc2818.html">https://httpwg.org/specs/rfc2818.html</a></dd><dt id="bib-rfc3447">[rfc3447]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc3447"><cite>Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.1</cite></a>. J. Jonsson; B. Kaliski.  IETF. February 2003. Informational. URL: <a href="https://www.rfc-editor.org/rfc/rfc3447">https://www.rfc-editor.org/rfc/rfc3447</a></dd><dt id="bib-rfc5246">[rfc5246]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc5246"><cite>The Transport Layer Security (TLS) Protocol Version 1.2</cite></a>. T. Dierks; E. Rescorla.  IETF. August 2008. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc5246">https://www.rfc-editor.org/rfc/rfc5246</a></dd><dt id="bib-rfc5322">[rfc5322]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc5322"><cite>Internet Message Format</cite></a>. P. Resnick, Ed..  IETF. October 2008. Draft Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc5322">https://www.rfc-editor.org/rfc/rfc5322</a></dd><dt id="bib-rfc5756">[rfc5756]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc5756"><cite>Updates for RSAES-OAEP and RSASSA-PSS Algorithm Parameters</cite></a>. S. Turner; D. Brown; K. Yiu; R. Housley; T. Polk.  IETF. January 2010. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc5756">https://www.rfc-editor.org/rfc/rfc5756</a></dd><dt id="bib-rfc5785">[rfc5785]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc5785"><cite>Defining Well-Known Uniform Resource Identifiers (URIs)</cite></a>. M. Nottingham; E. Hammer-Lahav.  IETF. April 2010. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc5785">https://www.rfc-editor.org/rfc/rfc5785</a></dd><dt id="bib-rfc7230">[rfc7230]</dt><dd><a href="https://httpwg.org/specs/rfc7230.html"><cite>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</cite></a>. R. Fielding, Ed.; J. Reschke, Ed..  IETF. June 2014. Proposed Standard. URL: <a href="https://httpwg.org/specs/rfc7230.html">https://httpwg.org/specs/rfc7230.html</a></dd><dt id="bib-rfc8446">[rfc8446]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc8446"><cite>The Transport Layer Security (TLS) Protocol Version 1.3</cite></a>. E. Rescorla.  IETF. August 2018. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc8446">https://www.rfc-editor.org/rfc/rfc8446</a></dd><dt id="bib-xmldsig-core1">[xmldsig-core1]</dt><dd><a href="https://www.w3.org/TR/xmldsig-core1/"><cite>XML Signature Syntax and Processing Version 1.1</cite></a>. Donald Eastlake; Joseph Reagle; David Solo; Frederick Hirsch; Magnus Nyström; Thomas Roessler; Kelvin Yiu.  W3C. 11 April 2013. W3C Recommendation. URL: <a href="https://www.w3.org/TR/xmldsig-core1/">https://www.w3.org/TR/xmldsig-core1/</a></dd><dt id="bib-xmlenc-core">[xmlenc-core]</dt><dd><a href="https://www.w3.org/TR/xmlenc-core/"><cite>XML Encryption Syntax and Processing</cite></a>. Donald Eastlake; Joseph Reagle.  W3C. 10 December 2002. W3C Recommendation. URL: <a href="https://www.w3.org/TR/xmlenc-core/">https://www.w3.org/TR/xmlenc-core/</a></dd></dl>
   </section><section id="informatieve-referenties">
-    <h3 id="a-2-informatieve-referenties"><bdi class="secno">A.2 </bdi>Informatieve referenties<a class="self-link" aria-label="§" href="#informatieve-referenties"></a></h3>
+    <h3 id="a-2-informatieve-referenties"><bdi class="secno">A.2 </bdi>Informatieve referenties<a class="self-link" href="#informatieve-referenties" aria-label="Permalink for Appendix A.2"></a></h3>
     <dl class="bibliography"><dt id="bib-digikoppeling architectuur">[Digikoppeling Architectuur]</dt><dd><a href="https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html"><cite>Digikoppeling Architectuur</cite></a>. Logius Centrum voor standaarden.  Logius. december 2020. URL: <a href="https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html">https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html</a></dd><dt id="bib-digikoppeling identificatie-authenticatie">[Digikoppeling Identificatie-Authenticatie]</dt><dd><a href="http://www.logius.nl/digikoppeling"><cite>Digikoppeling Identificatie en Authenticatie</cite></a>.  Logius. URL: <a href="http://www.logius.nl/digikoppeling">http://www.logius.nl/digikoppeling</a></dd><dt id="bib-digikoppeling-cert">[Digikoppeling-Cert]</dt><dd><a href="http://www.logius.nl/digikoppeling"><cite>Gebruik en achtergrond van Digikoppeling certificaten</cite></a>.  Logius. URL: <a href="http://www.logius.nl/digikoppeling">http://www.logius.nl/digikoppeling</a></dd><dt id="bib-ncsc 2019">[NCSC 2019]</dt><dd><a href="https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-tls"><cite>ICT-beveiligingsrichtlijnen voor Transport Layer Security (TLS) v2.0</cite></a>.  NCSC. April 2019. URL: <a href="https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-tls">https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-tls</a></dd><dt id="bib-pkioverheid">[PKIoverheid]</dt><dd><a href="https://www.logius.nl/diensten/pkioverheid"><cite>PKIoverheid</cite></a>.  Logius. URL: <a href="https://www.logius.nl/diensten/pkioverheid">https://www.logius.nl/diensten/pkioverheid</a></dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script id="respec-dfn-panel">(() => {
 // @ts-check
 if (document.respec) {
-  document.respec.ready.then(dfnPanel);
+  document.respec.ready.then(setupPanel);
 } else {
-  dfnPanel();
+  setupPanel();
 }
 
-function dfnPanel() {
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
   /** @type {HTMLElement} */
-  let panel;
-  document.body.addEventListener("click", event => {
-    if (!(event.target instanceof HTMLElement)) return;
+  let panel = null;
+  return event => {
+    const { target, type } = event;
 
-    /** @type {HTMLElement} */
-    const el = event.target;
+    if (!(target instanceof HTMLElement)) return;
 
-    const action = deriveAction(el);
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
     switch (action) {
       case "show": {
-        if (panel) hidePanel(panel);
+        hidePanel(panel);
         /** @type {HTMLElement} */
-        const dfn = el.closest("dfn, .index-term");
+        const dfn = target.closest("dfn, .index-term");
         panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
-        displayPanel(dfn, panel, { x: event.clientX, y: event.clientY });
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
         break;
       }
       case "dock": {
@@ -991,30 +666,59 @@ function dfnPanel() {
       }
       case "hide": {
         hidePanel(panel);
+        panel = null;
         break;
       }
     }
-  });
+  };
 }
 
-/** @param {HTMLElement} clickTarget */
-function deriveAction(clickTarget) {
-  const hitALink = !!clickTarget.closest("a");
-  if (clickTarget.closest("dfn, .index-term")) {
-    return hitALink ? null : "show";
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
   }
-  if (clickTarget.closest(".dfn-panel")) {
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
     if (hitALink) {
-      const clickedSelfLink = clickTarget.classList.contains("self-link");
-      return clickedSelfLink ? "hide" : "dock";
+      return target.classList.contains("self-link") ? "hide" : "dock";
     }
-    const panel = clickTarget.closest(".dfn-panel");
-    return panel.classList.contains("docked") ? "hide" : null;
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
   }
   if (document.querySelector(".dfn-panel:not([hidden])")) {
     return "hide";
   }
-  return null;
+  return "none";
 }
 
 /**
@@ -1056,11 +760,86 @@ function displayPanel(dfn, panel, { x, y }) {
     const caret = panel.querySelector(".caret");
     caret.style.left = `${newCaretOffset}px`;
   }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
 }
 
 /** @param {HTMLElement} panel */
 function hidePanel(panel) {
+  if (!panel) return;
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script></body></html>
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
