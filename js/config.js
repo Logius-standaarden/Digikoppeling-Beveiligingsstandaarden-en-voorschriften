@@ -1,6 +1,6 @@
 var respecConfig = {
   // this template doesn''t use all possible config parameters
-  // see https://respec.org/docs/ for alle 
+  // see https://respec.org/docs/ for alle
 
   // specStatus currently supported
   // WW, GN-WV: Werkversie
@@ -43,13 +43,13 @@ var respecConfig = {
   // the url in the header thisVersion is generated like `<conf.nl_organisationPublishURL>/<conf.pubDomain>/<specStatus>-<specType.toLowerCase()>-<conf.shortName>}-conf.publishDate>/`
   pubDomain: "dk",
 
-  // subtitle will be shown below title, can be omitted 
+  // subtitle will be shown below title, can be omitted
   //subtitle: "Hier komt een subtitle",
 
   // The specification's "short name", which is the name used in NL_Respec URLs
   shortName: "beveilig",
 
-  // A YYYY-MM-DD date. The publication date of the present document. 
+  // A YYYY-MM-DD date. The publication date of the present document.
   // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
   // Belangrijk: als publishDate niet opgegeven is, wordt bij de link "Laatst gepubliceerde versie" "geen" gezet. Anders wordt een link opgebouwd voor de laatste versie, met het formaat:
   publishDate: "2021-02-01",
@@ -69,7 +69,7 @@ var respecConfig = {
 
   // Overrides the standard logo with one or more other logos. (see https://respec.org/docs/#logos)
   // Geef een lege array op als er geen <default> logo moet staan
-  // logos: [], 
+  // logos: [],
 
   //Adds a JSON-LD script element containing schema.org information, which can be useful for search engines.
   doJsonLd: true,
@@ -127,7 +127,7 @@ var respecConfig = {
 
   // in some cases the Repository of a Specification document and the Issue- and PR bases are split
   // thi scan be configured below
-  // if not set, the url's will be generated on the respecConfig.github automatically  
+  // if not set, the url's will be generated on the respecConfig.github automatically
   nl_github: {
     //issueBase: "https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/issues",
     revision: "https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/commits",
@@ -135,15 +135,15 @@ var respecConfig = {
   },
 
   // nl_organisationName is used for some company specific values in the header (and Sotd)
-  // currently supported: Logius and Geonovum (default)  
+  // currently supported: Logius and Geonovum (default)
   nl_organisationName: "Logius",
 
   // prefix for the names of company specific css, svg and ico prefixes
-  // defaults to "GN-"  
+  // defaults to "GN-"
   nl_organisationPrefix: "LS-",
 
   // class style can be automatically insertd in generated markdown tables
-  // currently defaults to simple, but this may change    
+  // currently defaults to simple, but this may change
   nl_markdownTableClass: "dkkvs",
 
   // if nl_markdownEmbedImageInFigure is set to true images in markdown generated content will be surrounded with <figures> element
@@ -170,7 +170,7 @@ var respecConfig = {
     url: "https://www.logius.nl/standaarden",
   },
 
-  // If you need to include a one-off reference that isn't in the SpecRef database or 
+  // If you need to include a one-off reference that isn't in the SpecRef database or
   // if you need to override an existing reference with specific content, then you can use this configuration option.
   localBiblio: {
     NEN3610: {
@@ -182,7 +182,7 @@ var respecConfig = {
       publisher: "Nederlands Normalisatie-instituut",
     },
     "Digikoppeling Architectuur": {
-      href: "https://centrumvoorstandaarden.github.io/Architectuur2.0-metRestfulAPI/static.html",
+      href: "https://publicatie.centrumvoorstandaarden.nl/dk/architectuur/2.0vv/",
       title:
         "Digikoppeling Architectuur",
       authors: ["Logius Centrum voor standaarden"],
@@ -255,4 +255,3 @@ var respecConfig = {
     }
   },
 };
-
