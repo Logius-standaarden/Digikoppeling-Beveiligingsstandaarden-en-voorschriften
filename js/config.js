@@ -125,15 +125,6 @@ var respecConfig = {
   // this configuration can be set to make sure that the alle H1 headers and navigation bars are preserved
   nl_markdownSplitH1sections: true,
 
-  // in some cases the Repository of a Specification document and the Issue- and PR bases are split
-  // thi scan be configured below
-  // if not set, the url's will be generated on the respecConfig.github automatically  
-  nl_github: {
-    //issueBase: "https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/issues",
-    revision: "https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/commits",
-    //pullrequests: "https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/pulls"
-  },
-
   // nl_organisationName is used for some company specific values in the header (and Sotd)
   // currently supported: Logius and Geonovum (default)  
   nl_organisationName: "Logius",
@@ -141,10 +132,6 @@ var respecConfig = {
   // prefix for the names of company specific css, svg and ico prefixes
   // defaults to "GN-"  
   nl_organisationPrefix: "LS-",
-
-  // class style can be automatically insertd in generated markdown tables
-  // currently defaults to simple, but this may change    
-  nl_markdownTableClass: "dkkvs",
 
   // if nl_markdownEmbedImageInFigure is set to true images in markdown generated content will be surrounded with <figures> element
   // so that figures can be linked are be a part of table of figures
