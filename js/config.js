@@ -27,6 +27,6 @@ var respecConfig = {
   publishDate: "2021-02-01",
   publishVersion: "1.4",
   shortName: "beveilig",
-  specStatus: "DEF",
+  specStatus: "WV",
   specType: "ST"
 };
