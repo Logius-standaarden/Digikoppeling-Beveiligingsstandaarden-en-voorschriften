@@ -15,7 +15,7 @@
 | SIGN001 | Signing met SHA-2 is verplicht. | Minimaal SHA-224 of SHA-256. |
 | SIGN002 | Signing conform XMLDSIG is verplicht | Zie de koppelvlakstandaarden signed profielen |
 | SIGN003 | Het DigestMethod Algorithm moet gebruik maken van een van de volgende algoritmen: SHA-224, SHA-256, SHA-384, SHA-512 [[xmlenc-core]], [[[FIPS-180-4]]]| Zie ook [https://www.w3.org/TR/xmldsig-core1/\#sec-DigestMethod](https://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod) [[xmldsig-core1]] |
-| SIGN004 | Het SignatureMethod Algorithm kan gebruik maken van een van de volgende algoritmen: [SHA-224]  [SHA-256] [SHA-384] [SHA-512]  |  Zie ook [https://www.w3.org/TR/xmldsig-core1/\#sec-DigestMethod](https://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod) voor voorbeelden|
+| SIGN004 | Het SignatureMethod Algorithm kan gebruik maken van een van de volgende algoritmen: [SHA-224]  [SHA-256] [SHA-384] [SHA-512][Ed25519]  |  Zie ook [https://www.w3.org/TR/xmldsig-core1/\#sec-DigestMethod](https://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod) voor voorbeelden, en  [RFC9231]|
 
 ### Reden voor vervanging SHA-1 door SHA-2
 
