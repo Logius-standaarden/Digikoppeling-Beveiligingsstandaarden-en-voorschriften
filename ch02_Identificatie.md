@@ -14,5 +14,4 @@ De bron voor identificatie van organisaties is een erkend register dat is opgeno
 
 Zie [[[?DK-IDAuth]]] voor meer informatie.
 
-Het OIN register is bereikbaar op [*https://oinregister.logius.nl/*](https://oinregister.logius.nl/).
-
+Het OIN register is bereikbaar via het [[[DK-Portaal]]].
