@@ -12,7 +12,7 @@ Het organisatie identificatienummer (OIN) is het identificerende nummer voor org
 
 De bron voor identificatie van organisaties is een erkend register dat is opgenomen in het OIN beleid. In de meeste gevallen is dit het Handelsregister. Het OIN kan worden opgezocht in het OIN Register.
 
-Zie [[?Digikoppeling Identificatie-Authenticatie]]] voor meer informatie.
+Zie [[[?DK-IDAuth]]] voor meer informatie.
 
 Het OIN register is bereikbaar op [*https://oinregister.logius.nl/*](https://oinregister.logius.nl/).
 
