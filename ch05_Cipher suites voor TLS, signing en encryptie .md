@@ -40,4 +40,4 @@ In plaats daarvan is het dus wenselijk om gebruik te maken van een algoritme dat
 | ENC001 | Indien er gebruik wordt gemaakt van XML encryption op payload niveau dient de FIPS 197 standaard (AES) te worden gebruikt.  | [[AES]] |
 | ENC002 | Encryptie conform XML versleuteling [[xmlenc-core]] is verplicht |  [[xmlenc-core]] |
 | ENC003 | De ondersteunde data encryption (data versleuteling) algoritmen zijn: 3DES AES128 AES256 | [[xmlenc-core]]  (Gebruik GCM mode indien beschikbaar anders CBC mode in combinatie met een signature)  |
-| ENC004 | Het Key transport algorithm maakt gebruik van de RSA-OAEP algoritmen. | [[rfc5756]], [xmlenc-core], [[rfc5756]]|
+| ENC004 | Het Key transport algorithm maakt gebruik van de RSA-OAEP algoritmen. | [[rfc5756]], [[xmlenc-core]], [[rfc5756]]|
