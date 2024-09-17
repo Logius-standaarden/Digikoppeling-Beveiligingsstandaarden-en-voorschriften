@@ -1,4 +1,6 @@
-# TLS 
+# TLS (Transport Layer Security)
+
+Transport Layer Security (TLS) is een protocol dat een veilige versleutelde verbinding legt tussen systemen waardoor gegevens vertrouwelijk en compleet wordt uitgewisseld. Binnen de context van Digikoppeling verplicht TLS het gebruik van wederzijde authenticatie van de betrokken partijen, zodat alleen geautoriseerde systemen kunnen communiceren met elkaar.
 
 ## Standaarden
 
