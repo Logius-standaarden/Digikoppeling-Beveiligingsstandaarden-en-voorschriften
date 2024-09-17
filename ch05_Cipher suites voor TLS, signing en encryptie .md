@@ -4,7 +4,7 @@
 
 | Nr | Voorschrift | Toelichting |
 | --- | --- | --- |
-| TLSCIPH001 |  De gebruikte TLS cryptografische algoritmen moeten de NCSC classificatie ‘voldoende’ of ‘goed’ hebben.  TLS cryptografische algoritmen met de NCSC classificatie ‘uit te faseren’ dienen zo spoedig mogelijk maar uiterlijk 01-01-2021 te worden uitgefaseerd. |   Zie  [[NCSC 2021]]  |
+| TLSCIPH001 |  De gebruikte TLS cryptografische algoritmen moeten de NCSC classificatie ‘voldoende’ of ‘goed’ hebben. TLS-cryptografische algoritmen die de NCSC-classificatie ‘uit te faseren’ hebben, zijn sinds 1 januari 2021 niet meer toegestaan.  |   Zie  [[NCSC 2021]]  |
 
 ## XML Signing
 
