@@ -4,7 +4,7 @@
 
 | Nr | Voorschrift | Toelichting |
 | --- | --- | --- |
-| TLSCIPH001 |  De gebruikte TLS cryptografische algoritmen moeten de NCSC classificatie ‘voldoende’ of ‘goed’ hebben.  TLS cryptografische algoritmen met de NCSC classificatie ‘uit te faseren’ dienen zo spoedig mogelijk maar uiterlijk 01-01-2021 te worden uitgefaseerd. |   Zie  [[NCSC 2021]]  |
+| TLSCIPH001 |  De gebruikte TLS cryptografische algoritmen moeten de NCSC classificatie ‘voldoende’ of ‘goed’ hebben. TLS-cryptografische algoritmen die de NCSC-classificatie ‘uit te faseren’ hebben, zijn sinds 1 januari 2021 niet meer toegestaan.  |   Zie  [[NCSC 2021]]  |
 
 ## XML Signing
 
@@ -39,5 +39,6 @@ In plaats daarvan is het dus wenselijk om gebruik te maken van een algoritme dat
 | --- | --- | --- |
 | ENC001 | Indien er gebruik wordt gemaakt van XML encryption op payload niveau dient de FIPS 197 standaard (AES) te worden gebruikt.  | [[AES]] |
 | ENC002 | Encryptie conform XML versleuteling [[xmlenc-core]] is verplicht |  [[xmlenc-core]] |
-| ENC003 | De ondersteunde data encryption (data versleuteling) algoritmen zijn: 3DES AES128 AES256 | [[xmlenc-core]]  (Gebruik GCM mode indien beschikbaar anders CBC mode in combinatie met een signature)  |
-| ENC004 | Het Key transport algorithm maakt gebruik van de RSA-OAEP algoritmen. | [[rfc5756]], [xmlenc-core], [[rfc5756]]|
+| ENC003 | De ondersteunde data encryption (data versleuteling) algoritmen zijn: _3DES(*)_ AES128 AES256 | [[xmlenc-core]]  (Gebruik GCM mode indien beschikbaar anders CBC mode in combinatie met een signature) <BR><BR>(*) 3DES Encryptie - 2024:Verouderd, Vanaf 2025:Niet Gebruiken.<BR> 3DES Decryptie - Toegestaan voor Legacy applicaties; |
+| ENC004 | Het Key transport algorithm maakt gebruik van de RSA-OAEP algoritmen. | [[rfc5756]], [[xmlenc-core]], [[rfc5756]]|
+

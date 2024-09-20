@@ -4,7 +4,7 @@
 
 | Standaarden | Status | Genoemd in |
 | --- | --- | --- |
-| PKIoverheid certificaten & CRL Profile  | Verplicht | PKIoverheid Programma van Eisen [[PKI Policy]], [[rfc3447]]|
+| PKIoverheid certificaten & CRL Profile  | Verplicht | [[[PKIO-PvE]]], [[rfc3447]]|
 
 ## Wat is PKIoverheid? 
 
@@ -12,7 +12,7 @@
 
 PKIoverheid is de public key infrastructure in Nederland waarmee PKIoverheid certificaten worden uitgegeven en toegepast conform afspraken die zijn vastgelegd in het PKIoverheid Programma van Eisen.
 
-Zie ook het document [[?Digikoppeling-Cert]] en [[?PKIoverheid]]
+Zie ook het document [[[?DK-gbachtcert]]] en [[[?PKIoverheid]]]
 
 ### PKIoverheid certificaat 
 
@@ -26,17 +26,17 @@ Digikoppeling vereist dat de communicatiepartners PKIoverheid private root certi
 
 | Nr | Voorschrift | Toelichting |
 | --- | --- | --- |
-| PKI001 | Gebruik OIN in subject serial number veld is verplicht | Dit is afgesproken met de TSPs in de Digikoppeling Overeenkomsten. Zij verstrekken PKIoverheid certificaten met het OIN in het subject.serialnumber field conform de OIN systematiek als het een certificaat betreft dat voor Digikoppeling wordt gebruikt. [[PKI CA]] |
+| PKI001 | Gebruik OIN in subject serial number veld is verplicht | Dit is afgesproken met de TSPs in de Digikoppeling Overeenkomsten. Zij verstrekken PKIoverheid certificaten met het OIN in het subject.serialnumber field conform de OIN systematiek als het een certificaat betreft dat voor Digikoppeling wordt gebruikt. [[PKI-CA]] |
 | PKI002 | PKIoverheid certificaat moet geldig zijn (het mag niet zijn verlopen of ingetrokken). | |
 | PKI003<br>(WT004)  | De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List(CRL) die voldoet aan de eisen van PKI-overheid. | |
 | PKI004<br>(WT005) | De betreffende CRL dient zowel voor de versturende als ontvangende partij te benaderen zijn. | |
-| PKI005 | Het certificaat moet zijn van het type PKIoverheid private root (PKI Staat der Nederlanden Private Root) <sup>1</sup>. <br><br><sup>1</sup> Uitzondering is wanneer er in het kader van certificaatbeheer op 1 server reden is om PKIO public root certificaten te gebruiken voor zowel koppeling als voor webserver. Hier dienen dan bilateraal afspraken over te worden gemaakt tussen de partijen.<br>(Bij gebruik van PKIO public root certificaten is een specifieke eis en aandachtspunt dat deze vanwege externe regelgeving altijd binnen drie tot vijf dagen vervangen moeten kunnen worden.)<br>Deze uitzondering is toegestaan tot 01-12-2022<br><br>Voor Serviceaanbieders  en Servicegebruikers geldt dat zij uiterlijk per 1-1-2021 gebruik moeten maken van private root certificaten| PKIOverheid geeft aan dat voor machine-naar-machine (M2M) verkeer (zoals Digikoppeling) Private root certificaten gebruikt dienen te worden.|
+| PKI005 | Het certificaat moet zijn van het type PKIoverheid private root (PKI Staat der Nederlanden Private Root) <br>Voor Serviceaanbieders  en Servicegebruikers geldt dat zij vanaf 1-1-2021 gebruik moeten maken van private root certificaten| PKIOverheid geeft aan dat voor machine-naar-machine (M2M) verkeer (zoals Digikoppeling) Private root certificaten gebruikt dienen te worden.|
 
 ### PKIoverheid programma van eisen
 
 1. Een PKIoverheid certificaat dient conform de eisen van het PKIoverheid PvE te worden uitgegeven door de Trust Service Providers (TSP).
 
-1. De te gebruiken certificaten in de productie omgeving voldoen aan de eisen van PKIoverheid (PvE) en de inhoud van de identificerende velden in het certificaat dienen te voldoen aan de afspraken zoals gesteld in de functionele eisen in het document [[?Digikoppeling Identificatie-Authenticatie]]. Met het toepassen van PKIoverheid-certificaten die Digikoppeling compliant zijn, wordt hieraan voldaan.
+1. De te gebruiken certificaten in de productie omgeving voldoen aan de eisen van PKIoverheid (PvE) en de inhoud van de identificerende velden in het certificaat dienen te voldoen aan de afspraken zoals gesteld in de functionele eisen in het document [[[?DK-IDAuth]]]. Met het toepassen van PKIoverheid-certificaten die Digikoppeling compliant zijn, wordt hieraan voldaan.
 
 1. Certificaten voor productie wijken af van certificaten voor test doordat zij op verschillende ‘roots’ zijn gebaseerd, respectievelijk 'Staat der Nederlanden Root Private Root’ en ‘PKI TRIAL root’.
 
