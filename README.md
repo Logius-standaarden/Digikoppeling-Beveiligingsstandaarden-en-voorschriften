@@ -1,6 +1,5 @@
 # Digikoppeling Beveiligingstandaarden en voorschriften
 
-- html: https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/
-- html(static): https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/snapshot.html
-- markdown: [04_content.md](04_content.md)/
-- PDF-versie: https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/blob/master/Digikoppeling-Beveiligingsstandaarden-en-voorschriften.pdf
+- Gepubliceerde versie: https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/
+- Werkversie: https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/
+- PDF: https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/Digikoppeling-Beveiligingsstandaarden-en-voorschriften.pdf

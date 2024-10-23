@@ -31,13 +31,59 @@ De koppelvlakstandaarden dienen te leiden tot een maximum aan interoperabiliteit
 
 ## Digikoppeling standaarden 
 
-De Digikoppeling standaarden bestaan uit de volgende documenten (groene blokken zijn onderdeel van de Digikoppeling standaard):
+De documentatie is als volgt opgebouwd:
 
-*Specificatie van de koppelvlakstandaarden*
+![Overzicht van de onderdelen van de Digikoppeling Standaard, de standaard is onderverdeeld in normatieve en ondersteunende onderdelen](media/DK_Specificatie_structuur.svg "Digikoppeling Standaard")
 
-De koppelvlakspecificatie beschrijft de eisen die gesteld worden aan de adapters om interoperabel met elkaar te kunnen communiceren. De hele set informatie die tezamen nodig is voor een complete generieke Digikoppeling koppelvlakdefinitie bestaat uit:
+<details>
+    <summary> Tekstalternatief </summary>
+<ul>
+	<li>Digikoppeling Standaard
+		<ul>
+			<li> <a href="https://gitdocumentatie.logius.nl/publicatie/dk/beheer/">DK Beheermodel en releasebeleid</a>* </li>
+			<li> <a href="https://gitdocumentatie.logius.nl/publicatie/dk/actueel/">DK Overzicht Actuele Documentatie en Compliance</a>* </li>
+			<li> <a href="https://gitdocumentatie.logius.nl/publicatie/dk/architectuur">DK Architectuur</a>*
+				<ul>
+					<li> <a href="https://gitdocumentatie.logius.nl/publicatie/dk/idauth/">DK Identificatie en Authenticatie</a>*
+						<ul>
+							<li><i> <a href="https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert/">Digikoppeling Gebruik en Achtergronden Certificaten</a></i>† </li>
+						</ul>
+					</li>
+					<li> <a href="https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/">DK Beveiligingsstandaarden en voorschriften</a>* </li>
+					<li>Koppelvlakstandaarden
+						<ul>
+							<li> <a href="https://gitdocumentatie.logius.nl/publicatie/dk/wus/">DK Koppelvlakstandaard WUS</a>*
+								<ul>
+									<li><i><a href="https://gitdocumentatie.logius.nl/publicatie/dk/bpwus">Best-practice WUS</a></i>† </li>
+								</ul>
+							</li>
+							<li> <a href="https://gitdocumentatie.logius.nl/publicatie/dk/ebms/">DK Koppelvlakstandaard ebMS2</a>*
+								<ul>
+									<li> <i><a href="https://gitdocumentatie.logius.nl/publicatie/dk/bpebms">Best-practice ebMS2</a></i>† </li>
+								</ul>
+							</li>
+							<li> <a href="https://gitdocumentatie.logius.nl/publicatie/dk/gb/">DK Koppelvlakstandaard Grote Berichten</a>*
+								<ul>
+									<li> <i><a href="https://gitdocumentatie.logius.nl/publicatie/dk/bpgb">Best-practice Grote Berichten</a></i>†</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+    <i><a href="https://gitdocumentatie.logius.nl/publicatie/dk/watisdk/">Wat is Digikoppeling</a></i>†
+  </li>
+		</ul>
+	</li>
+</ul>
+<p>* Normatief document</p>
+<p>† Ondersteunend document</p>
+</details>
 
-- Interfacedefinitie.
+- Alle groene documenten vallen onder het beheer zoals geformaliseerd in het [[[?DK-Beheermodel]]].
 
-- Beveiligingsvoorschriften en standaarden voor de transport laag, signing en encryptie (cipher suites).
+- Alle goedgekeurde documenten zijn te vinden op de website van Logius: [[[DK-Doc]]].
+
+  
 
