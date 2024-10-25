@@ -21,12 +21,12 @@ var respecConfig = {
     ],
   github: "https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften",
   previousMaturity: "DEF",
-  previousPublishDate: "2020-09-01",
-  previousPublishVersion: "1.3",
+  previousPublishDate: "2021-02-01",
+  previousPublishVersion: "1.4",
   pubDomain: "dk",
-  publishDate: "2021-02-01",
-  publishVersion: "1.4",
+  publishDate: "2024-09-19",
+  publishVersion: "",
   shortName: "beveilig",
-  specStatus: "VV",
+  specStatus: "CV",
   specType: "ST"
 };
