@@ -25,8 +25,8 @@ var respecConfig = {
   previousPublishVersion: "1.3",
   pubDomain: "dk",
   publishDate: "2021-02-01",
-  publishVersion: "1.4",
+  publishVersion: "1.4.1",
   shortName: "beveilig",
-  specStatus: "WV",
+  specStatus: "DEF",
   specType: "ST"
 };
