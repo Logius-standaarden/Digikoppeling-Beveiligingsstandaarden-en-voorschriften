@@ -7,3 +7,4 @@
 | 17/12/2019 | 1.2    | Logius | Aanpassing n.a.v. NCSC TLS Richtlijnen versie 2.0              |
 | 01/09/2020 | 1.3    | Logius | PKIO Private Root certificaten toegevoegd                      |
 | 01/02/2021 | 1.4    | Logius | Alleen PKIO Private Root toegestaan. Verwijzing naar meest recente versie van [[NCSC 2021]]. Vorige versie was [[?NCSC 2019]]|
+| 15/05/2025 | 2.0    | Logius | Uitfasering 3DES|
