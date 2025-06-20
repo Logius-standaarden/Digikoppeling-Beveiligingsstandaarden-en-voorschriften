@@ -30,5 +30,5 @@ In Digikoppeling is ervoor gekozen om PKIoverheid certificaten te gebruiken op h
 
 ## Overwegingen 
 
-Het NCSC adviseert om TLS altijd te configureren op basis van [[NCSC 2021]] voor Transport Layer Security.
+Het NCSC adviseert om TLS altijd te configureren op basis van [[NCSC 2025]] voor Transport Layer Security.
 
