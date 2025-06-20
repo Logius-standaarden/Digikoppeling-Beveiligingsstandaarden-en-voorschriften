@@ -20,9 +20,7 @@ Transport Layer Security (TLS) is een protocol dat een veilige versleutelde verb
 | TLS004 | Een Serviceaanbieder is <span class="underline">verplicht</span> TLS versie 1.2 te ondersteunen, daarnaast is het <span class="underline">aanbevolen</span> voor een Serviceaanbieder om TLS versie 1.3 te ondersteunen.  Als een Serviceaanbieder TLS versie 1.3 aanbiedt dan is het aanbevolen voor Serviceafnemers om TLS 1.3 te gebruiken | NCSC geeft aan: “Configureer het gebruik van TLS 1.2 ter ondersteuning van oudere clients, maar geef de voorkeur aan TLS 1.3 waar mogelijk [6]. Andere versies zijn niet veilig in het gebruik.” Zie [[NCSC 2025]]|
 ||TLS 1.0 en TLS 1.1 zijn niet meer toegestaan|Niet meer toegestaan binnen de Digikoppeling standaard vanaf 10-9-2016 |
 | TLS005 | Het is verplicht voor communicatie over HTTPS port 443 te gebruiken | Port 443 is de standaard poort voor HTTPS verkeer |
-| TLS006 | Het is verplicht te voldoen aan de NCSC ICT-beveiligingsrichtlijnen voor TLS | Zie H3 van [[NCSC 2021]] (*) |
-
-(*) Zie https://www.ncsc.nl/documenten/publicaties/2023/september/18/maak-je-organisatie-quantumveilig voor specifieke adviezen NCSC/AIVD t.a.v. Post Quantum Cryptografie
+| TLS006 | Het is verplicht te voldoen aan de NCSC ICT-beveiligingsrichtlijnen voor TLS | Zie [[NCSC 2025]]|
 
 ## Onderbouwing
 
