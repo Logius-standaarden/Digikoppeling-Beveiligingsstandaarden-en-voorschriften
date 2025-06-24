@@ -13,18 +13,16 @@ var respecConfig = {
         "url" : "https://logius.nl/standaarden"
       },
       { 
-        "company" : "Logius",
-        "companyURL" : "https://logius.nl/standaarden",
-        "mailto" : "api@digikoppeling.nl",
-        "name" : "Pieter Hering"
+        "name" : "Nil Barua",
+        "url" : "https://logius.nl/standaarden"
       }
     ],
   github: "https://github.com/Logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften",
-  previousPublishDate: "2021-02-01",
-  previousPublishVersion: "1.4.1",
+  previousPublishDate: "2025-05-15",
+  previousPublishVersion: "2.0.0",
   pubDomain: "dk",
-  publishDate: "2025-05-15",
-  publishVersion: "2.0.0",
+  publishDate: "2025-06-24",
+  publishVersion: "2.0.1",
   shortName: "beveilig",
   specStatus: "DEF",
   specType: "ST"
