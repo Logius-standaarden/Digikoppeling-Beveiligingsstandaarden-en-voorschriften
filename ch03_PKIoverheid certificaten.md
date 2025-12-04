@@ -10,7 +10,7 @@
 
 ### PKIoverheid
 
-PKIoverheid is de public key infrastructure in Nederland waarmee PKIoverheid certificaten worden uitgegeven en toegepast conform afspraken die zijn vastgelegd in het PKIoverheid Programma van Eisen.
+PKIoverheid is de public key infrastructure in Nederland waarmee PKIoverheid certificaten worden uitgegeven en toegepast conform afspraken die zijn vastgelegd in het PKIoverheid Programme of Requirements.
 
 Zie ook het document [[[?DK-gbachtcert]]] en [[[?PKIoverheid]]]
 
