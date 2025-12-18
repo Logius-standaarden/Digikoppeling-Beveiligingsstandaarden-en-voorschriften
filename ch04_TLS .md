@@ -7,7 +7,7 @@ Transport Layer Security (TLS) is een protocol dat een veilige versleutelde verb
 | Standaarden | Status | Bron |
 | --- | --- | --- |
 | TLS 1.2 [[rfc5246]]  | Verplicht  | [[NCSC 2025]]  |
-| TLS 1.3 [[rfc8446]]  | Optioneel  | [[NCSC 2025]]  |
+| TLS 1.3 [[rfc8446]]  | Zeer aanbevolen  | [[NCSC 2025]]  |
 | HTTP over TLS Transport Layer Security<br>([[rfc2818]], [[rfc5785]], [[rfc7230]]) | Informational |  IETF [[rfc5322]]|
 
 ## Digikoppeling voorschriften
