@@ -10,7 +10,7 @@
 
 ### PKIoverheid
 
-PKIoverheid is de public key infrastructure in Nederland waarmee PKIoverheid certificaten worden uitgegeven en toegepast conform afspraken die zijn vastgelegd in het PKIoverheid Programma van Eisen.
+PKIoverheid is de public key infrastructure in Nederland waarmee PKIoverheid certificaten worden uitgegeven en toegepast conform afspraken die zijn vastgelegd in het PKIoverheid Programme of Requirements.
 
 Zie ook het document [[[?DK-gbachtcert]]] en [[[?PKIoverheid]]]
 
@@ -26,23 +26,23 @@ Digikoppeling vereist dat de communicatiepartners PKIoverheid private root certi
 
 | Nr | Voorschrift | Toelichting |
 | --- | --- | --- |
-| PKI001 | Gebruik OIN in subject serial number veld is verplicht | Dit is afgesproken met de TSPs in de Digikoppeling Overeenkomsten. Zij verstrekken PKIoverheid certificaten met het OIN in het subject.serialnumber field conform de OIN systematiek als het een certificaat betreft dat voor Digikoppeling wordt gebruikt. [[PKI-CA]] |
+| PKI001 | Gebruik OIN in `subject:serialNumber` veld is verplicht | Dit is afgesproken met de TSP's in de Digikoppeling Overeenkomsten. Zij verstrekken PKIoverheid certificaten met het OIN in het `subject:serialNumber` field conform de OIN systematiek als het een certificaat betreft dat voor Digikoppeling wordt gebruikt. [[PKI-CA]] |
 | PKI002 | PKIoverheid certificaat moet geldig zijn (het mag niet zijn verlopen of ingetrokken). | |
-| PKI003<br>(WT004)  | De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List(CRL) die voldoet aan de eisen van PKI-overheid. | |
+| PKI003<br>(WT004)  | De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List(CRL) die voldoet aan de eisen van PKIoverheid. | |
 | PKI004<br>(WT005) | De betreffende CRL dient zowel voor de versturende als ontvangende partij te benaderen zijn. | |
-| PKI005 | Het certificaat moet zijn van het type PKIoverheid private root (PKI Staat der Nederlanden Private Root) <br>Voor Serviceaanbieders  en Servicegebruikers geldt dat zij vanaf 1-1-2021 gebruik moeten maken van private root certificaten| PKIOverheid geeft aan dat voor machine-naar-machine (M2M) verkeer (zoals Digikoppeling) Private root certificaten gebruikt dienen te worden.|
+| PKI005 | Het certificaat moet zijn van het type PKIoverheid private root (PKI Staat der Nederlanden Private Root) <br>Voor Serviceaanbieders  en Servicegebruikers geldt dat zij vanaf 1-1-2021 gebruik moeten maken van private root certificaten| PKIoverheid geeft aan dat voor machine-naar-machine (M2M) verkeer (zoals Digikoppeling) Private root certificaten gebruikt dienen te worden.|
 
-### PKIoverheid programma van eisen
+### PKIoverheid Programme of Requirements
 
 1. Een PKIoverheid certificaat dient conform de eisen van het PKIoverheid PvE te worden uitgegeven door de Trust Service Providers (TSP).
 
 1. De te gebruiken certificaten in de productie omgeving voldoen aan de eisen van PKIoverheid (PvE) en de inhoud van de identificerende velden in het certificaat dienen te voldoen aan de afspraken zoals gesteld in de functionele eisen in het document [[[?DK-IDAuth]]]. Met het toepassen van PKIoverheid-certificaten die Digikoppeling compliant zijn, wordt hieraan voldaan.
 
-1. Certificaten voor productie wijken af van certificaten voor test doordat zij op verschillende ‘roots’ zijn gebaseerd, respectievelijk 'Staat der Nederlanden Root Private Root’ en ‘PKI TRIAL root’.
+1. Certificaten voor productie wijken af van certificaten voor test doordat zij onder een andere 'root' zijn uitgegeven, respectievelijk 'Staat der Nederlanden' (productie) en 'TRIAL PKIoverheid' (test). Deze zijn te vinden op <https://cert.pkioverheid.nl>. 
 
 ### Geldigheid
 
-De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List(CRL) die voldoet aan de eisen van PKI-overheid. Zie eis PKI002 en PKI003
+De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List (CRL) die voldoet aan de eisen van PKIoverheid. Zie eis PKI002 en PKI003. 
 
 De betreffende CRL dient zowel voor de versturende als ontvangende partij te benaderen zijn. Zie eis PKI004 (WT005)
 
