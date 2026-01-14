@@ -12,10 +12,10 @@
 
 | Nr | Voorschrift | Toelichting |
 | --- | --- | --- |
-| SIGN001 | Signing met SHA-2 is verplicht. | Minimaal SHA 224 of SHA-256. |
+| SIGN001 | Signing met SHA-2 is verplicht. | Minimaal SHA-256. |
 | SIGN002 | Signing conform XMLDSIG is verplicht | Zie de koppelvlakstandaarden signed profielen |
-| SIGN003 | Het DigestMethod Algorithm moet gebruik maken van een van de volgende algoritmen: SHA-224, SHA-256, SHA-384, SHA-512 [[xmlenc-core]], [[[FIPS-180-4]]]| Zie ook [https://www.w3.org/TR/xmldsig-core1/\#sec-DigestMethod](https://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod) [[xmldsig-core1]] |
-| SIGN004 | Het SignatureMethod Algorithm kan gebruik maken van een van de volgende algoritmen: [SHA-224] [SHA-256] [SHA-384] [SHA-512]  |  Zie ook [https://www.w3.org/TR/xmldsig-core1/\#sec-DigestMethod](https://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod) voor voorbeelden|
+| SIGN003 | Het DigestMethod Algorithm moet gebruik maken van een van de volgende algoritmen: SHA-256, SHA-384, SHA-512 [[xmlenc-core]], [[[FIPS-180-4]]]| Zie ook [https://www.w3.org/TR/xmldsig-core1/\#sec-DigestMethod](https://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod) [[xmldsig-core1]] |
+| SIGN004 | Het SignatureMethod Algorithm kan gebruik maken van een van de volgende algoritmen: [SHA-256] [SHA-384] [SHA-512]  |  Zie ook [https://www.w3.org/TR/xmldsig-core1/\#sec-DigestMethod](https://www.w3.org/TR/xmldsig-core1/#sec-DigestMethod) voor voorbeelden|
 
 ### Reden voor vervanging SHA-1 door SHA-2
 
@@ -39,6 +39,6 @@ In plaats daarvan is het dus wenselijk om gebruik te maken van een algoritme dat
 | --- | --- | --- |
 | ENC001 | Indien er gebruik wordt gemaakt van XML encryption op payload niveau dient de FIPS 197 standaard (AES) te worden gebruikt.  | [[AES]] |
 | ENC002 | Encryptie conform XML versleuteling [[xmlenc-core]] is verplicht |  [[xmlenc-core]] |
-| ENC003 | De ondersteunde data encryption (data versleuteling) algoritmen zijn: _3DES(*)_ AES128 AES256 | [[xmlenc-core]]  (Gebruik GCM mode indien beschikbaar anders CBC mode in combinatie met een signature) <BR><BR>(*) 3DES-encryptie verouderd: Niet gebruiken.<BR> 3DES-decryptie toegestaan voor legacy applicaties; |
+| ENC003 | De ondersteunde data encryption (data versleuteling) algoritmen zijn: _3DES(*)_ AES128 AES256 | [[xmlenc-core]]  (Gebruik GCM mode) <BR><BR>(*) 3DES-encryptie verouderd: Niet gebruiken.<BR> 3DES-decryptie toegestaan voor legacy applicaties; |
 | ENC004 | Het Key transport algorithm maakt gebruik van de RSA-OAEP algoritmen. | [[rfc5756]], [[xmlenc-core]], [[rfc5756]]|
 
