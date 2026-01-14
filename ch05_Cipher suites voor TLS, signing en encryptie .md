@@ -5,6 +5,7 @@
 | Nr | Voorschrift | Toelichting |
 | --- | --- | --- |
 | TLSCIPH001 |  De gebruikte TLS cryptografische algoritmen moeten de NCSC classificatie ‘voldoende’ of ‘goed’ hebben. TLS-cryptografische algoritmen die de NCSC-classificatie ‘uit te faseren’ hebben, zijn sinds 1 januari 2021 niet meer toegestaan.  |   Zie  [[NCSC 2025]]  |
+| TLSCIPH001 |  De gebruikte TLS cryptografische algoritmen moeten de NCSC classificatie ‘voldoende’ of ‘goed’ hebben. TLS-cryptografische algoritmen die de NCSC-classificatie ‘uit te faseren’ hebben, zijn sinds 1 januari 2021 niet meer toegestaan.  |   Zie  [[NCSC 2025]]  |
 
 ## XML Signing
 
@@ -21,6 +22,7 @@
 
 *Certificaten met SHA-1 als hashfunctie worden vervangen door certificaten met hashfuncties uit de SHA-2-familie: SHA-256, SHA-384 en SHA-512. Certificaten met MD5 als hashfunctie zijn enkele jaren geleden al vervangen. MD5 is de voorloper van SHA-1. [[HTTPS-factsheet NCSC]]*
 
+PKIoverheid stelt SHA-2 als eis. Alle certificaten die onder de root Staat der Nederlanden worden uitgegeven moeten voldoen aan SHA-2. 
 PKIoverheid stelt SHA-2 als eis. Alle certificaten die onder de root Staat der Nederlanden worden uitgegeven moeten voldoen aan SHA-2. 
 
 In plaats daarvan is het dus wenselijk om gebruik te maken van een algoritme dat als ‘goed’ is aangemerkt, dus:
