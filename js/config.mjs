@@ -22,6 +22,6 @@ loadRespecWithConfiguration({
   publishDate: "2025-06-24",
   publishVersion: "2.0.1",
   shortName: "beveilig",
-  specStatus: "DEF",
+  specStatus: "WV",
   specType: "ST"
 });
