@@ -46,7 +46,7 @@ De geldigheid van het certificaat wordt getoetst met betrekking tot de geldighei
 
 De betreffende CRL dient zowel voor de versturende als ontvangende partij te benaderen zijn. Zie eis PKI004 (WT005)
 
-Een certificaat dient te worden ingetrokken als de organisatie niet meer bestaat of als de private sleutel gecompromitteerd is.
+Een certificaat dient te worden ingetrokken als de organisatie niet meer bestaat of als de private sleutel gecompromitteerd is. Het [[[PKIO-PvE]]] geeft meer handen en voeten aan over scenario's met ingetrokken certificaten in de secties 4.1.2, 4.5.2 en 4.9.1
 
 ## Best practices 
 
