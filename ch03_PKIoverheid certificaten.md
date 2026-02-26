@@ -52,3 +52,9 @@ Een certificaat dient te worden ingetrokken als de organisatie niet meer bestaat
 
 De best practices voor inrichting en gebruik zijn beschreven in *Gebruik en achtergronden Digikoppeling certificaten*.
 
+## Welk certificaat dient gebruikt te worden voor Digikoppeling?
+
+| Versie | Certificaat Naam | OID | Extra Informatie |
+|--------|------------------|-----|------------------|
+| G1/G3 | G1 Private Services Server | 2.16.528.1.1003.1.2.8.6 | Met domeinnamen; Dit is de huidige certificaat die dient gebruikt te worden voor 'DK' in G1/G3 |
+| G4 | G4 Private TLS Generic Devices Organization Validated Server | 2.16.528.1.1003.1.2.44.15.35.11 | Dit is de cert die gebruikt voor G4 |
