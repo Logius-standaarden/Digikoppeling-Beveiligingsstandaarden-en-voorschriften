@@ -48,7 +48,7 @@ De betreffende CRL dient zowel voor de versturende als ontvangende partij te ben
 
 Wanneer er tijdens de looptijd van een certificaat een bepaalde gebeurtenis plaatsvindt, dan moet het certificaat worden ingetrokken. Bijvoorbeeld wanneer de bijbehorende private sleutel is gecompromitteerd of wanneer de organisatie waarvoor het certificaat is uitgegeven wordt opgeheven of van (handels)naam wijzigt. 
 
-Het [[[PKIO-PvE]]] beschrijft in de secties 4.1.2, 4.5.2 en 4.9.1 de gebeurtenissen wanneer certificaten ingetrokken moeten worden. 
+Het [[[PKIO-PvE]]] beschrijft in de secties 4.1.2, 4.5.2 en 4.9.1 de gebeurtenissen wanneer certificaten ingetrokken moeten worden. Om de geldigheid van certificaten correct te controleren is een juiste systeemtijd essentieel. Afwijkingen kunnen leiden tot onterechte acceptatie of afwijzing. Het is daarom verstandig systemen automatisch te synchroniseren met een betrouwbare tijdsbron, bijvoorbeeld via [NTP](https://www.forumstandaardisatie.nl/open-standaarden/ntp).
 
 ## Best practices 
 
