@@ -58,3 +58,5 @@ De best practices voor inrichting en gebruik zijn beschreven in *Gebruik en acht
 |--------|------------------|-----|------------------|
 | G1/G3 | G1 Private Services Server Met domeinnamen| 2.16.528.1.1003.1.2.8.6 | Dit is de huidige certificaat die dient gebruikt te worden voor 'DK' in G1/G3 |
 | G4 | G4 Private TLS Generic Devices Organization Validated Server | 2.16.528.1.1003.1.2.44.15.35.11 | Dit is de PKIo G4 certificaat die gebruikt  moet worden voor Digikoppeling.|
+
+<p class="note">Let op: De PKIo G1/G3 certificaten vervallen vanaf november 2028. Zorg ervoor dat je tijdig migreert naar de G4 certificaten. Voor meer informatie, zie [artikel](https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid/wees-voorbereid-de-nieuwe-generatie-pkioverheidcertificaten-komen-eraan).
