@@ -54,7 +54,7 @@ De best practices voor inrichting en gebruik zijn beschreven in *Gebruik en acht
 
 ## Welk certificaat dient gebruikt te worden voor Digikoppeling?
 
-| Versie | Certificaat Naam | OID | 
+| Versie | Certificaatnaam | OID | 
 |--------|------------------|-----|
 | G1/G3 | G1 Private Services Server Met domeinnamen| `2.16.528.1.1003.1.2.8.6` |
 | G4 | G4 Private TLS Generic Devices Organization Validated Server | `2.16.528.1.1003.1.2.44.15.35.11` |
