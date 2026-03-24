@@ -6,7 +6,7 @@
 |----------------------------------------|-----------|-----------------------------|
 | PKIoverheid certificaten & CRL Profile | Verplicht | [[[PKIO-PvE]]], [[RFC3447]] |
 
-## Wat is PKIoverheid? 
+## Wat is PKIoverheid?
 
 ### PKIoverheid
 
@@ -14,7 +14,7 @@ PKIoverheid is de public key infrastructure in Nederland waarmee PKIoverheid cer
 
 Zie ook het document [[[?DK-gbachtcert]]] en [[[?PKIoverheid]]]
 
-### PKIoverheid certificaat 
+### PKIoverheid certificaat
 
 Het PKIoverheid-certificaat is een computerbestand dat werkt als een digitaal paspoort. Als iemand een website, e-mail of document van uw organisatie wil bekijken, controleert zijn webbrowser of e-mailprogramma het bijbehorende certificaat. Door elkaar te identificeren verkleint de kans dat oplichters zich voor kunnen doen als iemand anders. Digitale certificaten waarborgen dus betrouwbaarheid [[?PKIoverheid]].
 
@@ -38,16 +38,16 @@ Digikoppeling vereist dat de communicatiepartners PKIoverheid private root certi
 
 1. De te gebruiken certificaten in de productie omgeving voldoen aan de eisen van PKIoverheid (PvE) en de inhoud van de identificerende velden in het certificaat dienen te voldoen aan de afspraken zoals gesteld in de functionele eisen in het document [[[?DK-IDAuth]]]. Met het toepassen van PKIoverheid-certificaten die Digikoppeling compliant zijn, wordt hieraan voldaan.
 
-1. Certificaten voor productie wijken af van certificaten voor test doordat zij onder een andere 'root' zijn uitgegeven, respectievelijk 'Staat der Nederlanden' (productie) en 'TRIAL PKIoverheid' (test). Deze zijn te vinden op <https://cert.pkioverheid.nl>. 
+1. Certificaten voor productie wijken af van certificaten voor test doordat zij onder een andere 'root' zijn uitgegeven, respectievelijk 'Staat der Nederlanden' (productie) en 'TRIAL PKIoverheid' (test). Deze zijn te vinden op <https://cert.pkioverheid.nl>.
 
 ### Geldigheid
 
-De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List (CRL) die voldoet aan de eisen van PKIoverheid. Zie eis PKI002 en PKI003. 
+De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List (CRL) die voldoet aan de eisen van PKIoverheid. Zie eis PKI002 en PKI003.
 
 De betreffende CRL dient zowel voor de versturende als ontvangende partij te benaderen zijn. Zie eis PKI004 (WT005)
 
 Een certificaat dient te worden ingetrokken als de organisatie niet meer bestaat of als de private sleutel gecompromitteerd is.
 
-## Best practices 
+## Best practices
 
 De best practices voor inrichting en gebruik zijn beschreven in *Gebruik en achtergronden Digikoppeling certificaten*.

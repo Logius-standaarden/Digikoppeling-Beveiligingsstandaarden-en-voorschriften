@@ -30,8 +30,7 @@ Zowel de Digikoppeling-koppelvlakstandaard ebMS2 als de Digikoppeling-koppelvlak
 
 In Digikoppeling is ervoor gekozen om PKIoverheid certificaten te gebruiken op het niveau van het communicatiekanaal (TLS) om de directe communicatiepartners te authenticeren. TLS kan niet toegepast worden om end-to-end authenticatie uit te voeren in een multi-hop (voor ebMS2) omgeving; zie daarvoor berichtniveau beveiliging in de [[[?DK-Architectuur]]] documentatie.
 
-## Overwegingen 
+## Overwegingen
 
 Het NCSC adviseert om TLS altijd te configureren op basis van [[NCSC 2025]] voor Transport Layer Security.
 Het NCSC adviseert om TLS altijd te configureren op basis van [[NCSC 2025]] voor Transport Layer Security.
-
