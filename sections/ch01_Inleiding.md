@@ -40,7 +40,6 @@ De documentatie is als volgt opgebouwd:
 
 <b>Legenda</b>
 
-
 <table class="legendum">
     <thead>
         <tr>
@@ -59,7 +58,6 @@ De documentatie is als volgt opgebouwd:
         </tr>
     </tbody>
 </table>
-
 
 <b>Beheer</b>
 
