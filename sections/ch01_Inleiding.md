@@ -10,7 +10,7 @@ Alle Digikoppeling webservices moeten conformeren aan deze Digikoppeling beveili
 
 Doel van dit document is ontwikkelaars te informeren wat deze beveiligingsvoorschriften precies inhouden, welke standaarden en welke versies toegestaan zijn en partijen zich aan moeten conformeren.
 
-## Digikoppeling 
+## Digikoppeling
 
 Deze paragraaf bevat zeer beknopt een aantal hoofdpunten uit de overige documentatie.
 
@@ -18,7 +18,7 @@ Digikoppeling biedt de mogelijkheid om op een sterk gestandaardiseerde wijze ber
 
 De uitwisseling tussen service providers en requesters wordt in drie lagen opgedeeld:
 
-- Inhoud: op deze laag worden de afspraken gemaakt over de inhoud van het uit te wisselen bericht, dus de structuur, semantiek, waardebereiken etc.   
+- Inhoud: op deze laag worden de afspraken gemaakt over de inhoud van het uit te wisselen bericht, dus de structuur, semantiek, waardebereiken etc.
     Digikoppeling houdt zich niet met de inhoud bezig, ‘heeft geen boodschap aan de boodschap’.
 
 - Logistiek: op deze laag bevinden zich de afspraken betreffende transportprotocollen (HTTP & TLS), messaging, beveiliging (authenticatie en encryptie) en betrouwbaarheid. Dit is de laag van Digikoppeling.
@@ -29,7 +29,7 @@ Digikoppeling richt zich dus uitsluitend op de logistieke laag. Deze afspraken k
 
 De koppelvlakstandaarden dienen te leiden tot een maximum aan interoperabiliteit met een minimum aan benodigde ontwikkelinspanning. Daarom is gekozen voor bewezen interoperabele internationale standaarden.
 
-## Digikoppeling standaarden 
+## Digikoppeling standaarden
 
 De documentatie is als volgt opgebouwd:
 
@@ -39,7 +39,6 @@ De documentatie is als volgt opgebouwd:
 </figure>
 
 <b>Legenda</b>
-
 
 <table class="legendum">
     <thead>
@@ -59,7 +58,6 @@ De documentatie is als volgt opgebouwd:
         </tr>
     </tbody>
 </table>
-
 
 <b>Beheer</b>
 
