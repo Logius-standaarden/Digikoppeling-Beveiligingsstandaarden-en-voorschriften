@@ -23,8 +23,8 @@ loadRespecWithConfiguration({
   previousPublishVersion: "2.0.0",
   pubDomain: "dk",
   publishDate: "2025-06-24",
-  publishVersion: "2.0.1",
+  publishVersion: "2.0.2",
   shortName: "beveilig",
-  specStatus: "WV",
+  specStatus: "DEF",
   specType: "ST"
 });
